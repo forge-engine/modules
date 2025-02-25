@@ -1,6 +1,6 @@
 {
     "$schema": "./../../engine/Core/Schema/module-schema.json",
-    "name": "ForgeStaticGen",
+    "name": "forge-static",
     "version": "1.0.0",
     "description": "A Basic Static Site Generator by Forge",
     "type": "generic",

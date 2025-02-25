@@ -1,6 +1,6 @@
 {
     "$schema": "./../../engine/Core/Schema/module-schema.json",
-    "name": "ForgeMarkDown",
+    "name": "forge-markdown",
     "version": "1.0.0",
     "description": "A simple Markdown Processor by Forge",
     "type": "generic",

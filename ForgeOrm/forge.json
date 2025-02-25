@@ -1,6 +1,6 @@
 {
     "$schema": "./../../engine/Core/Schema/module-schema.json",
-    "name": "ForgeOrm",
+    "name": "forge-orm",
     "version": "1.0.0",
     "description": "A Basic ORM By Forge",
     "type": "generic",
