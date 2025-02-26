@@ -1,6 +1,6 @@
 {
     "$schema": "./../../engine/Core/Schema/module-schema.json",
-    "name": "forge-database",
+    "name": "Database",
     "version": "1.0.0",
     "description": "A Database Module by Forge",
     "type": "generic",

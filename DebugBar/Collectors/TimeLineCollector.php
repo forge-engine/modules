@@ -2,6 +2,8 @@
 
 namespace Forge\Modules\DebugBar\Collectors;
 
+use Forge\Core\Helpers\Debug;
+
 class TimelineCollector implements CollectorInterface
 {
     private array $events = [];
@@ -27,6 +29,7 @@ class TimelineCollector implements CollectorInterface
             'label' => $label,
             'time' => microtime(true),
             'data' => $data,
+            'origin' => Debug::backtraceOrigin()
         ];
     }
 }

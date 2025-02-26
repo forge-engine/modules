@@ -35,8 +35,8 @@ return [
             'database' => App::env('FORGE_DB_PGSQL_DATABASE', 'forge'),
             'username' => App::env('FORGE_DB_PGSQL_USERNAME', 'postgres'),
             'password' => App::env('FORGE_DB_PGSQL_PASSWORD', 'postgres'),
-            'charset' => App::env('FORGE_DB_PGSQL_PASSWORD', 'utf8'),
-            'sslmode' => App::env('FORGE_DB_PGSQL_PASSWORD', 'disable'), // Default SSL mode, adjust as needed ('disable', 'allow', 'prefer', 'require', 'verify-ca', 'verify-full')
+            'charset' => App::env('FORGE_DB_PGSQL_CHARSET', 'utf8'),
+            'sslmode' => App::env('FORGE_DB_PGSQL_SSLMODE', 'disable'), // Default SSL mode, adjust as needed ('disable', 'allow', 'prefer', 'require', 'verify-ca', 'verify-full')
             'ssl' => [
                 'ca' => App::env('FORGE_DB_PGSQL_SSL_CA'),
                 'cert' => App::env('FORGE_DB_PGSQL_SSL_CERT'),

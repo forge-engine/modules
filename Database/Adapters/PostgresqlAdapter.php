@@ -2,16 +2,30 @@
 
 namespace Forge\Modules\Database\Adapters;
 
+use Forge\Core\Contracts\Events\EventDispatcherInterface;
+use Forge\Core\DependencyInjection\Container;
+use Forge\Core\Events\DatabaseQueryExecuted;
+use Forge\Core\Helpers\Debug;
 use Forge\Modules\Database\Contracts\DatabaseInterface;
+use Forge\Modules\ForgeOrm\QueryBuilder;
 use PDO;
 use PDOException;
 
 class PostgresqlAdapter implements DatabaseInterface
 {
     private ?PDO $pdo = null;
+    private EventDispatcherInterface $eventDispatcher;
+    private string $connectionName;
+
+    public function __construct(Container $container, string $connectionName)
+    {
+        $this->eventDispatcher = $container->get(EventDispatcherInterface::class);
+        $this->connectionName = $connectionName;
+    }
 
     public function connect(array $config): void
     {
+
         $dsn = "pgsql:host={$config['host']};";
         if (isset($config['port'])) {
             $dsn .= "port={$config['port']};";
@@ -72,19 +86,36 @@ class PostgresqlAdapter implements DatabaseInterface
         }
     }
 
+    private function dispatchQueryEvent(string $sql, array $params, float|int $queryTime): void
+    {
+        $origin = Debug::backtraceOrigin();
+        $event = new DatabaseQueryExecuted($sql, $params, $queryTime, $this->connectionName, $origin);
+        $this->eventDispatcher->dispatch($event);
+    }
+
     public function query(string $sql, array $params = []): array
     {
+        $starTime = microtime(true);
         $this->ensureConnected();
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute($params);
+        $endTime = microtime(true);
+        $queryTime = ($endTime - $starTime) * 1000;
+
+        $this->dispatchQueryEvent($sql, $params, $queryTime);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function execute(string $sql, array $params = []): int
     {
+        $starTime = microtime(true);
         $this->ensureConnected();
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute($params);
+        $endTime = microtime(true);
+        $queryTime = ($endTime - $starTime) * 1000;
+
+        $this->dispatchQueryEvent($sql, $params, $queryTime);
         return $stmt->rowCount();
     }
 
@@ -117,5 +148,13 @@ class PostgresqlAdapter implements DatabaseInterface
         if (!$this->pdo) {
             throw new \RuntimeException("Database connection not established. Call connect() first.");
         }
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function table(string $table): QueryBuilder
+    {
+        return (new QueryBuilder())->table($table);
     }
 }

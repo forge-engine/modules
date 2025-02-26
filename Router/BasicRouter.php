@@ -4,7 +4,6 @@ namespace Forge\Modules\Router;
 
 use Forge\Core\Contracts\Modules\RouterInterface;
 use Forge\Core\DependencyInjection\Container;
-use Forge\Core\Helpers\Debug;
 use Forge\Http\Middleware\MiddlewarePipeline;
 use Forge\Http\Request;
 use Forge\Http\Response;
@@ -14,18 +13,19 @@ class BasicRouter implements RouterInterface
     private array $routes = [];
     private string $currentGroupPrefix = '';
     private array $currentGroupMiddleware = [];
+    private ?array $currentRoute = null;
 
     public function __construct(
         private Container $container
     )
     {
-        Debug::addEvent("[RouterModule] Initilized..", "start");
+
     }
 
     public function addRoute(string $method, string $uri, array|callable $handler, array $middleware = []): void
     {
         $prefix = $this->currentGroupPrefix;
-        $prefixedUri = $uri; // Start with the route URI
+        $prefixedUri = $uri;
 
         if ($prefix && $uri !== '/') {
             $prefixedUri = rtrim($prefix, '/') . '/' . ltrim($uri, '/');
@@ -45,8 +45,10 @@ class BasicRouter implements RouterInterface
 
     public function handleRequest(Request $request): Response
     {
+        $this->currentRoute = null;
         foreach ($this->routes as $route) {
             if ($this->matchesRoute($route, $request)) {
+                $this->currentRoute = $route;
                 return $this->resolveMiddlewarePipeline($route, $request);
             }
         }
@@ -167,6 +169,11 @@ class BasicRouter implements RouterInterface
         $callback($this);
         $this->currentGroupPrefix = $previousPrefix;
         $this->currentGroupMiddleware = $previousMiddleware;
+    }
+
+    public function getCurrentRoute(): ?array
+    {
+        return $this->currentRoute;
     }
 
     public function getRoutes(): array

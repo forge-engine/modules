@@ -42,13 +42,13 @@ class ForgeOrmModule extends ModulesInterface
                 $container->get(DatabaseInterface::class),
                 $container->get(Schema::class)
             );
-            $seederManager = new SeedManager(
-                $container->get(DatabaseInterface::class),
-                $container->get(Schema::class)
-            );
+//            $seederManager = new SeedManager(
+//                $container->get(DatabaseInterface::class),
+//                $container->get(Schema::class)
+//            );
 
-            $container->instance(MigrationManager::class, $migrationManager);
-            $container->instance(SeedManager::class, $seederManager);
+            $container->bind(MigrationManager::class, MigrationManager::class, true);
+
 
             // Migration Commands
             $container->bind(CommandInterface::class, MigrateCommand::class);
@@ -56,14 +56,11 @@ class ForgeOrmModule extends ModulesInterface
             $container->tag(MigrateCommand::class, ['module.command']);
             $container->tag(MigrateRollbackCommand::class, ['module.command']);
 
+            //$container->instance(SeedManager::class, $seederManager);
             // Seeder Commands
-            $container->bind(CommandInterface::class, SeedCommand::class);
-            $container->tag(SeedCommand::class, ['module.command']);
+            //$container->bind(CommandInterface::class, SeedCommand::class);
+            //$container->tag(SeedCommand::class, ['module.command']);
         }
-
-
-        // $container->bind(Collection::class, Collection::class);
-        Debug::addEvent("[ForgeOrmModule] Registered", "start");
     }
 }
 

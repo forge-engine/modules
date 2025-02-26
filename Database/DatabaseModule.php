@@ -10,7 +10,6 @@ use Forge\Modules\Database\Adapters\RedisAdapter;
 use Forge\Modules\Database\Adapters\SqliteAdapter;
 use Forge\Core\Contracts\Modules\ModulesInterface;
 use Forge\Core\DependencyInjection\Container;
-use Forge\Core\Helpers\Debug;
 use Forge\Modules\Database\Contracts\DatabaseInterface;
 
 class DatabaseModule extends ModulesInterface
@@ -20,18 +19,18 @@ class DatabaseModule extends ModulesInterface
         $config = App::config();
         $databaseParams = $config->get('database');
         $connection = $databaseParams['connections'][$databaseParams['default']];
+        $connectionName = $connection['database'];
 
         $adapter = match ($connection['driver']) {
-            'mysql' => new MysqlAdapter(),
-            'pgsql' => new PostgresqlAdapter(),
-            'sqlite' => new SqliteAdapter(),
-            'memory' => new InMemoryAdapter(),
+            'mysql' => new MysqlAdapter($container, $connectionName),
+            'pgsql' => new PostgresqlAdapter($container, $connectionName),
+            'sqlite' => new SqliteAdapter($container, $connectionName),
+            'memory' => new InMemoryAdapter($container, $connectionName),
             'redis' => new RedisAdapter(),
             default => throw new \RuntimeException("Unsupported driver")
         };
 
         $adapter->connect($connection);
         $container->instance(DatabaseInterface::class, $adapter);
-        Debug::addEvent("[DatabaseModule] Registered", "start"); // Example event
     }
 }

@@ -177,4 +177,35 @@ class Collection implements ArrayAccess, IteratorAggregate, Countable, JsonSeria
         return new static($results);
     }
 
+    /**
+     * Determine if the collection is empty.
+     *
+     * @return bool
+     */
+    public function isEmpty(): bool
+    {
+        return $this->count() === 0;
+    }
+
+    /**
+     * Pluck a single column/key value from each item in the collection.
+     *
+     * @param string $key The key to pluck from each item.
+     * @return array<int, mixed> An array of plucked values.
+     */
+    public function pluck(string $key): array
+    {
+        $results = [];
+        foreach ($this->items as $item) {
+            if (is_array($item) && array_key_exists($key, $item)) {
+                $results[] = $item[$key];
+            } elseif (is_object($item) && property_exists($item, $key)) {
+                $results[] = $item->{$key};
+            } else {
+                $results[] = null; // Or handle missing key as needed (e.g., throw exception, skip item)
+            }
+        }
+        return $results;
+    }
+
 }

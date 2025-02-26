@@ -19,7 +19,6 @@ class ViewModule extends ModulesInterface
         );
 
         $container->instance(ViewEngineInterface::class, $engine);
-        Debug::addEvent("[ViewModule] Registered..", "start");
     }
 
     public function onAfterConfigLoaded(Container $container): void

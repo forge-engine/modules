@@ -152,7 +152,7 @@ class SeedManager
 
     private function runSeed(array $seed): void
     {
-        require_once $seed['path'];
+       
         $className = $this->getClassNameFromFile($seed['path']);
 
         $instance = new $className();

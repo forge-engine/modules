@@ -2,7 +2,6 @@
 
 namespace Forge\Modules\ErrorPages;
 
-use Forge\Core\Helpers\Debug;
 use Forge\Core\Helpers\Path;
 use Forge\Http\Request;
 use Throwable;
@@ -16,7 +15,6 @@ class ErrorPageRenderer
     {
         $this->basePath = $basePath;
         $this->snippetContext = $snippetContext;
-        Debug::addEvent("[ErrorModule] Initilized..", "start");
     }
 
     public function render(Throwable $e, Request $request): string

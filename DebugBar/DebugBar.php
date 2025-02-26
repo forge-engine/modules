@@ -20,13 +20,15 @@ class DebugBar implements DebugBarInterface
     {
         $this->startTime = microtime(true);
         $this->startMemory = memory_get_usage();
-        Debug::addEvent("[DebugBarModule] Initilized..", "start");
+
     }
 
     public function addCollector(string $name, callable $collector): void
     {
+
         $this->collectors[$name] = $collector;
     }
+
 
     public function getData(): array
     {
@@ -39,6 +41,7 @@ class DebugBar implements DebugBarInterface
         }
 
         $data['memory'] = $this->getMemoryUsage();
+        $data['php_version'] = phpversion();
 
         return $data;
     }

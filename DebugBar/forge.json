@@ -7,11 +7,10 @@
     "provides": [
         "DebugBar@1.0"
     ],
-    "order": 999,
-    "core": true,
+    "order": 200,
+    "core": false,
     "requires": [],
     "lifecycleHooks": [
-        "afterResponse",
         "beforeBoot",
         "afterBoot",
         "beforeModuleLoad",

@@ -17,9 +17,11 @@ class MigrationManager
     private DatabaseInterface $db;
     private Schema $schema;
 
-    public function __construct(DatabaseInterface $db, Schema $schema)
+    public function __construct()
     {
-        $this->db = $db;
+        $databaseInstance = App::getContainer()->get(DatabaseInterface::class);
+        $schema = App::getContainer()->get(Schema::class);
+        $this->db = $databaseInstance;
         $this->schema = $schema;
         $this->ensureMigrationTableExists();
     }
@@ -34,14 +36,27 @@ class MigrationManager
         $this->db->beginTransaction();
 
         try {
-            foreach ($this->getPendingMigrations() as $migrationDetails) {
+            $pendingMigrations = $this->getPendingMigrations();
+
+            if (empty($pendingMigrations)) {
+                $this->info('No pending migrations to run.');
+                return;
+            }
+
+            $this->db->beginTransaction();
+
+            $this->comment('Running migrations:');
+            foreach ($pendingMigrations as $migrationName => $migrationDetails) {
                 $this->runMigration($migrationDetails);
             }
+
             $this->db->commit();
         } catch (\Throwable $e) {
             $this->db->rollback();
             throw $e;
         }
+
+        $this->info('Migrations completed.');
     }
 
     public function rollbackLastMigration(): void
@@ -53,12 +68,15 @@ class MigrationManager
         }
 
         $this->db->beginTransaction();
+
         try {
             $lastMigrationName = $this->getLastMigration();
+
             if ($lastMigrationName) {
                 $allMigrations = $this->getAllMigrations();
+
                 if (isset($allMigrations[$lastMigrationName])) {
-                    $lastMigrationPath = $allMigrations[$lastMigrationName];
+                    $lastMigrationPath = $allMigrations[$lastMigrationName]['path'];
                     $migrationDetails = ['name' => $lastMigrationName, 'path' => $lastMigrationPath];
                     $this->rollbackMigration($migrationDetails);
                 }
@@ -74,7 +92,8 @@ class MigrationManager
     {
         if (!$this->schema->hasTable(self::MIGRATION_TABLE)) {
             $this->schema->create(self::MIGRATION_TABLE, function (Blueprint $table) {
-                $table->integer('id', true);
+                $table->integer('id', true, true);
+                $table->string('migration', 255);
                 $table->integer('batch');
                 $table->timestamps();
             });
@@ -83,26 +102,25 @@ class MigrationManager
 
     private function getPendingMigrations(): array
     {
-        $ranMigrations = $this->getRanMigrationNames(); // Get just names of ran migrations
+        $ranMigrations = $this->getRanMigrationNames();
         $allMigrations = $this->getAllMigrations();
 
         $pendingMigrations = [];
-        foreach ($allMigrations as $migrationName => $migrationInfo) { // Loop through all migrations by name
-            if (!in_array($migrationName, $ranMigrations)) { // Check if name is in ran migrations
-                $pendingMigrations[$migrationName] = $migrationInfo; // Keep the full info array
+        foreach ($allMigrations as $migrationName => $migrationInfo) {
+            if (!in_array($migrationName, $ranMigrations)) {
+                $pendingMigrations[$migrationName] = $migrationInfo;
             }
         }
         return $pendingMigrations;
     }
 
-    private function getRanMigrationNames(): array // Get only names of ran migrations
+    private function getRanMigrationNames(): array
     {
         $results = $this->db->query(
-            "SELECT id FROM " . self::MIGRATION_TABLE
+            "SELECT migration FROM " . self::MIGRATION_TABLE
         );
-        return array_column($results, 'id'); // Extract just the 'id' (which is migration name) column
+        return array_column($results, 'migration');
     }
-
 
     private function getAllMigrations(): array
     {
@@ -119,13 +137,9 @@ class MigrationManager
 
         foreach (glob($modulesPath . '*/Database/Migrations/*.php') as $file) {
             $migrationName = $this->getMigrationNameFromFilePath($file);
-            $this->log($migrationName);
             $namespace = $this->getMigrationNamespaceFromFilePath($file, 'Modules');
-            $this->log($namespace);
             $className = $this->getClassName($migrationName, $namespace);
-            $this->log($className);
             $migrations[$migrationName] = ['name' => $migrationName, 'path' => $file, 'class' => $className, 'namespace' => $namespace];
-            $this->printArray($migrations[$migrationName]);
         }
         return $migrations;
     }
@@ -153,9 +167,8 @@ class MigrationManager
     {
         $segments = explode(DIRECTORY_SEPARATOR, $filePath);
         $moduleOrAppName = $segments[array_search('modules', $segments) + 1] ?? $segments[array_search('apps', $segments) + 1] ?? '';
-        return "{$type}\\{$moduleOrAppName}\\Database\\Migrations";
+        return "Forge\\{$type}\\{$moduleOrAppName}\\Database\\Migrations";
     }
-
 
     private function getClassName(string $filename, string $namespace): string
     {
@@ -164,83 +177,69 @@ class MigrationManager
         return "{$namespace}\\{$className}";
     }
 
-    private function normalizePath(string $path): string
-    {
-        return rtrim(
-            preg_replace("/[\/\\\\]+/", DIRECTORY_SEPARATOR, $path),
-            DIRECTORY_SEPARATOR
-        );
-    }
-
     private function runMigration(array $migration): void
     {
-        $this->debug("Running migration: " . $migration['name']);
-        $this->debug("Migration File Path: " . $migration['path']);
-        $this->debug("Class Name: " . $migration['class']); // Debug: Full Class Name
-
         if (!file_exists($migration['path'])) {
             $this->error("Error: Migration file not found at path: " . $migration['path']);
             return;
         }
 
-        require_once $migration['path'];
-
-        // Force autoloader to try and load the class again after require_once
-        try {
-            \Forge\Core\Bootstrap\Autoloader::load($migration['class']); // Explicitly trigger autoloader
-            $this->debug("Autoloader::load() called explicitly for: " . $migration['class']); // Debug autoloader call
-        } catch (\Throwable $autoloaderException) {
-            $this->error("Autoloader::load() Exception: " . $autoloaderException->getMessage()); // Debug autoloader exception
-        }
-
-
-        if (!class_exists($migration['class'])) { // Use full class name from $migration['class']
-            $this->error("Error: Class '{$migration['class']}' does NOT exist after require_once and Autoloader::load().");
-            return;
-        } else {
-            $this->success("Success: Class '{$migration['class']}' DOES exist after require_once and Autoloader::load().");
-        }
-
-        $instance = new $migration['class'](); // Instantiate using full class name
+        $instance = new $migration['class']();
         $instance->up();
         $this->recordMigration($migration['name']);
     }
 
     private function rollbackMigration(array $migration): void
     {
-        $migrationFile = $migration['path'];
-        require_once $migrationFile;
-        $className = $migration['class']; // Use full class name from $migration array
-
+        $className = $migration['name'];
         $instance = new $className();
-        $instance->down();
-        $this->removeMigrationRecord($migration['name']);
+        try {
+            $instance->down($this->schema);
+            $this->removeMigrationRecord($migration['name']);
+        } catch (\Throwable $e) {
+            $this->error("Error during migration 'down' for '{$migration['name']}': " . $e->getMessage());
+        }
     }
-
 
     private function recordMigration(string $migration): void
     {
-        $this->db->execute(
-            "INSERT INTO " . self::MIGRATION_TABLE . " (id, batch, created_at) VALUES (?, ?, ?)",
-            [$migration, $this->getNextBatchNumber(), date('Y-m-d H:i:s')]
-        );
+        $batch = $this->getNextBatchNumber();
+        $createdAt = date('Y-m-d H:i:s');
+
+        $insertResult = $this->db->table(self::MIGRATION_TABLE)->insert([
+            'migration' => $migration,
+            'batch' => $batch,
+            'created_at' => $createdAt,
+            'updated_at' => $createdAt,
+        ]);
+
+        if ($insertResult === false) {
+            $this->error("Failed to record migration in database: " . $migration);
+        }
     }
 
     private function removeMigrationRecord(string $migration): void
     {
-        $this->db->execute(
-            "DELETE FROM " . self::MIGRATION_TABLE . " WHERE id = ?",
+        $deleteResult = $this->db->execute(
+            "DELETE FROM " . self::MIGRATION_TABLE . " WHERE migration = ?",
             [$migration]
         );
+        if ($deleteResult === false) {
+            $this->error("Failed to remove migration record from database: " . $migration);
+        }
     }
 
     private function getLastMigration(): ?string
     {
         $result = $this->db->query(
-            "SELECT id FROM " . self::MIGRATION_TABLE . " ORDER BY created_at DESC LIMIT 1"
+            "SELECT migration FROM " . self::MIGRATION_TABLE . " ORDER BY created_at DESC LIMIT 1"
         );
 
-        return $result[0]['id'] ?? null;
+        if (empty($result)) {
+            return null;
+        }
+
+        return $result[0]['migration'] ?? null;
     }
 
     private function getNextBatchNumber(): int

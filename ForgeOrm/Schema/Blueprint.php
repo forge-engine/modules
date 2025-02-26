@@ -2,6 +2,8 @@
 
 namespace Forge\Modules\ForgeOrm\Schema;
 
+use Forge\Core\Helpers\App;
+
 class Blueprint
 {
     /**
@@ -12,6 +14,13 @@ class Blueprint
      * @var array[] Array to store relationship definitions.
      */
     protected array $relationships = [];
+
+    private string $dbDriver;
+
+    public function __construct()
+    {
+        $this->dbDriver = App::env('FORGE_DB_CONNECTION');
+    }
 
     /**
      * Add a string column to the blueprint.
@@ -62,10 +71,18 @@ class Blueprint
     {
         $type = 'INTEGER';
         if ($unsigned) {
-            $type = 'INTEGER UNSIGNED'; // Note: UNSIGNED may have different support levels across DBs
+            $type = 'INTEGER UNSIGNED';
         }
         if ($autoIncrement) {
-            $type .= ' AUTO_INCREMENT PRIMARY KEY'; // Assuming primary key for auto-increment
+            if ($this->dbDriver === 'mysql') {
+                $type .= ' AUTO_INCREMENT PRIMARY KEY';
+            } elseif ($this->dbDriver === 'pgsql') {
+                $type = 'SERIAL PRIMARY KEY';
+            } elseif ($this->dbDriver === 'sqlite') {
+                $type = 'INTEGER PRIMARY KEY AUTOINCREMENT';
+            } else {
+                $type .= ' AUTO_INCREMENT PRIMARY KEY';
+            }
         }
         $this->columns[] = "{$column} {$type}";
         return $this;
@@ -83,10 +100,18 @@ class Blueprint
     {
         $type = 'BIGINT';
         if ($unsigned) {
-            $type = 'BIGINT UNSIGNED'; // Note: UNSIGNED may have different support levels across DBs
+            $type = 'BIGINT UNSIGNED';
         }
         if ($autoIncrement) {
-            $type .= ' AUTO_INCREMENT PRIMARY KEY'; // Assuming primary key for auto-increment
+            if ($this->dbDriver === 'mysql') {
+                $type .= ' AUTO_INCREMENT PRIMARY KEY';
+            } elseif ($this->dbDriver === 'pgsql') {
+                $type = 'BIGSERIAL PRIMARY KEY';
+            } elseif ($this->dbDriver === 'sqlite') {
+                $type = 'INTEGER PRIMARY KEY AUTOINCREMENT';
+            } else {
+                $type .= ' AUTO_INCREMENT PRIMARY KEY';
+            }
         }
         $this->columns[] = "{$column} {$type}";
         return $this;
@@ -138,8 +163,15 @@ class Blueprint
     public function datetime(string $column, int $precision = 0): self
     {
         $type = 'DATETIME';
-        if ($precision > 0) {
-            $type = "DATETIME({$precision})"; // Precision support varies by database
+        if ($this->dbDriver === 'pgsql') {
+            $type = 'TIMESTAMP';
+            if ($precision > 0) {
+                $type = "TIMESTAMP({$precision})";
+            }
+        } else { // MySQL, SQLite
+            if ($precision > 0) {
+                $type = "DATETIME({$precision})";
+            }
         }
         $this->columns[] = "{$column} {$type}";
         return $this;
@@ -154,7 +186,19 @@ class Blueprint
      */
     public function timestamp(string $column, int $precision = 0): self
     {
-        return $this->datetime($column, $precision); // Timestamp often similar to Datetime
+        $type = 'TIMESTAMP';
+        if ($this->dbDriver === 'sqlite') {
+            $type = 'DATETIME';
+            if ($precision > 0) {
+                $type = "DATETIME({$precision})";
+            }
+        } else {
+            if ($precision > 0) {
+                $type = "TIMESTAMP({$precision})";
+            }
+        }
+        $this->columns[] = "{$column} {$type}";
+        return $this;
     }
 
     /**

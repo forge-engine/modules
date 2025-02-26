@@ -2,62 +2,58 @@
 
 namespace Forge\Modules\DebugBar;
 
+use Forge\Core\Contracts\Events\EventDispatcherInterface;
 use Forge\Core\Contracts\Modules\DebugBarInterface;
 use Forge\Core\Contracts\Modules\ModulesInterface;
-use Forge\Core\Bootstrap\AppManager;
-use Forge\Core\Configuration\Config;
 use Forge\Core\DependencyInjection\Container;
-use Forge\Http\Response;
+use Forge\Modules\DebugBar\Collectors\DatabaseCollector;
+use Forge\Modules\DebugBar\Collectors\ExceptionCollector;
+use Forge\Modules\DebugBar\Collectors\MemoryCollector;
+use Forge\Modules\DebugBar\Collectors\MessageCollector;
+use Forge\Modules\DebugBar\Collectors\RouteCollector;
+use Forge\Modules\DebugBar\Collectors\SessionCollector;
+use Forge\Modules\DebugBar\Collectors\TimeCollector;
+use Forge\Modules\DebugBar\Collectors\TimelineCollector;
+use Forge\Modules\DebugBar\Collectors\ViewCollector;
+use Forge\Modules\DebugBar\Listeners\DatabaseQueryListener;
+use Forge\Modules\DebugBar\Listeners\DebugBarInjectorListener;
+use Forge\Modules\DebugBar\Listeners\RequestCollectorListener;
+use Forge\Core\Events\DatabaseQueryExecuted;
+use Forge\Core\Events\RequestReadyForDebugBarCollector;
+use Forge\Core\Events\ResponseReadyForDebugBarInjection;
 
 class DebugBarModule extends ModulesInterface
 {
     public function register(Container $container): void
     {
-        /**
-         * @var AppManager $appManager
-         */
-        $appManager = $container->get(AppManager::class);
-
-        if (method_exists($this, 'onAfterResponse')) {
-            $appManager->addHook('afterResponse', [$this, 'onAfterResponse']);
-        }
+        $debugBarInstance = new DebugBar();
+        $container->instance(DebugBarInterface::class, $debugBarInstance);
     }
 
     public function onAfterModuleRegister(Container $container): void
     {
+        /** @var DebugBarInterface $debugBarInstance */
+        $debugBarInstance = $container->get(DebugBarInterface::class);
+        $debugBarInstance->addCollector('messages', [MessageCollector::class, 'collect']);
+        $debugBarInstance->addCollector('exceptions', [ExceptionCollector::class, 'collect']);
+        $debugBarInstance->addCollector('time', [TimeCollector::class, 'collect']);
+        $debugBarInstance->addCollector('memory', [MemoryCollector::class, 'collect']);
+        $debugBarInstance->addCollector('session', [SessionCollector::class, 'collect']);
+        $debugBarInstance->addCollector('views', [ViewCollector::class, 'collect']);
+        $debugBarInstance->addCollector('timeline', [TimelineCollector::class, 'collect']);
+        $debugBarInstance->addCollector('route', [RouteCollector::class, 'collect']);
+        $debugBarInstance->addCollector('database', [DatabaseCollector::class, 'collect']);
 
-    }
+        /** @var EventDispatcherInterface $eventDispatcher */
+        $eventDispatcher = $container->get(EventDispatcherInterface::class);
 
-    public function onAfterResponse(Container $container): void
-    {
-        if (!$this->isDebugEnabled($container)) {
-            return;
+        if ($container->has(DebugBarInterface::class)) {
+            $debugBarInterface = $container->get(DebugBarInterface::class);
+            $databaseQueryListener = new DatabaseQueryListener($debugBarInterface);
+            $eventDispatcher->listen(DatabaseQueryExecuted::class, $databaseQueryListener);
         }
 
-        /**
-         * @var Response $response
-         * @var DebugBarInterface $debugbar
-         */
-        $response = $container->get(Response::class);
-        $debugbar = $container->get(DebugBarInterface::class);
-        $content = $response->getContent() . $debugbar->render();
-        $response->setContent($content);
-//        if (strpos($response->getHeader('Content-Type'), 'text/html') !== false) {
-//            $content = $response->getContent() . $debugbar->render();
-//            $response->setContent($content);
-//        }
+        $eventDispatcher->listen(ResponseReadyForDebugBarInjection::class, DebugBarInjectorListener::class);
+        $eventDispatcher->listen(RequestReadyForDebugBarCollector::class, RequestCollectorListener::class);
     }
-
-    private function isDebugEnabled(Container $container): bool
-    {
-        $appEnv = $_ENV['APP_ENV'] ?? 'production';
-        $forgeDebug = filter_var($_ENV['FORGE_APP_DEBUG'] ?? false);
-        /**
-         * @var Config $config
-         */
-        $config = $container->get(Config::class);
-        $configEnabled = $config->get('debugbar.enabled', true);
-        return $configEnabled && $appEnv !== 'production' && $forgeDebug;
-    }
-
 }

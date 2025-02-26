@@ -7,7 +7,6 @@ use Forge\Modules\ForgeStaticGen\Commands\StaticGenBuildCommand;
 use Forge\Modules\ForgeStaticGen\Contacts\ForgeStaticGenInterface;
 use Forge\Core\Contracts\Modules\ModulesInterface;
 use Forge\Core\DependencyInjection\Container;
-use Forge\Core\Helpers\Debug;
 
 class ForgeStaticGenModule extends ModulesInterface
 {
@@ -25,8 +24,6 @@ class ForgeStaticGenModule extends ModulesInterface
             $container->instance(StaticGenBuildCommand::class, $staticBuildCommnad);
             $container->tag(StaticGenBuildCommand::class, ['module.command']);
         }
-        Debug::addEvent("[ForgeStaticGenModule] Registered", "info");
-
     }
 
 }

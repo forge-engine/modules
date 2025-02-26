@@ -49,7 +49,7 @@ class Schema
             switch ($driver) {
                 case 'sqlite':
                 case 'mysql':
-                case 'postgresql':
+                case 'pgsql':
                     $sql = "CREATE TABLE {$table} ({$columnDefinitions})";
                     $this->queryBuilder->raw($sql);
                     return true;
@@ -62,7 +62,6 @@ class Schema
             }
         } catch (\Exception $e) {
             $this->error("Error creating table '{$table}': " . $e->getMessage());
-            //error_log();
             return false;
         }
     }
@@ -81,7 +80,7 @@ class Schema
             switch ($driver) {
                 case 'sqlite':
                 case 'mysql':
-                case 'postgresql':
+                case 'pgsql':
                     $sql = "DROP TABLE IF EXISTS {$table}";
                     $this->queryBuilder->raw($sql);
                     return true;
@@ -118,12 +117,12 @@ class Schema
                 case 'mysql':
                     $sql = "SELECT table_name FROM information_schema.tables WHERE table_schema = DATABASE() AND table_name = :tableName";
                     $result = $this->queryBuilder->raw($sql, [':tableName' => $table]);
-                    return !empty($result);
+                    return $result->isEmpty() === false;
 
-                case 'postgresql':
-                    $sql = "SELECT tablename FROM pg_tables WHERE schemaname='public' AND tablename = :tableName";
-                    $result = $this->queryBuilder->raw($sql, [':tableName' => $table]);
-                    return !empty($result);
+                case 'pgsql':
+                    $sql = "SELECT to_regclass('public." . $table . "')";
+                    $result = $this->queryBuilder->raw($sql);
+                    return $result[0]['to_regclass'] !== null;
 
                 case 'redis':
                     return false;
@@ -132,7 +131,7 @@ class Schema
                     throw new \RuntimeException("Unsupported database driver: {$driver}");
             }
         } catch (\Exception $e) {
-            $this->error("Error checking table existence '{$table}': " . $e->getMessage());
+            $this->error("Error checking table existence '{$table}' for driver '{$driver}': " . $e->getMessage());
             return false;
         }
     }

@@ -6,7 +6,6 @@ use Forge\Core\Contracts\Modules\ModulesInterface;
 use Forge\Core\Contracts\Modules\RouterInterface;
 use Forge\Core\DependencyInjection\Container;
 use Forge\Core\Module\ModuleManifest;
-use Forge\Core\Configuration\Config;
 
 class RouterModule extends ModulesInterface
 {
@@ -25,9 +24,5 @@ class RouterModule extends ModulesInterface
 
     public function onAfterConfigLoaded(Container $container): void
     {
-        $config = $container->get(Config::class);
-        $get = $config->get('methods.get');
-
-        //echo "Config value 'methods.get': " . $get . "\n";
     }
 }

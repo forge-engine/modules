@@ -21,7 +21,8 @@
     "class": "Forge\\Modules\\PackageManager\\PackageManagerModule",
     "cli": {
         "commands": [
-            "install:module"
+            "install:module",
+            "remove:module"
         ]
     },
     "tags": [],

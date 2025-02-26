@@ -29,18 +29,19 @@ class RouteCollector implements CollectorInterface
         if ($container->has(RouterInterface::class)) {
             /** @var RouterInterface $router */
             $router = $container->get(RouterInterface::class);
-            $routes = $router->getRoutes();
+            $currentRoute = $router->getCurrentRoute();
+            
 
-            $formattedRoutes = [];
-            foreach ($routes as $route) {
-                $formattedRoutes[] = [
-                    'method' => $route['method'],
-                    'uri' => $route['uri'],
-                    'handler' => $this->formatHandler($route['handler']),
-                    'middleware' => $route['middleware']
+            if ($currentRoute) {
+                return [
+                    'uri' => $currentRoute['uri'] ?? 'N/A',
+                    'method' => $currentRoute['method'] ?? 'N/A',
+                    'handler' => $this->formatHandler($currentRoute['handler'] ?? 'N/A'),
+                    'middleware' => $currentRoute['middleware'] ?? [],
                 ];
+            } else {
+                return ['message' => 'No current route matched.'];
             }
-            return $formattedRoutes;
         } else {
             return [['error' => 'RouterInterface not bound in Container']];
         }
