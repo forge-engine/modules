@@ -7,7 +7,6 @@
 /node_modules/
 
 # Ignore modules
-modules/*
 !cache/.gitkeep
 
 # Ignore temporary files and logs
