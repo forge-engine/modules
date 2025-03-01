@@ -4,7 +4,7 @@ namespace Forge\Modules\ForgeOrm\Migrations;
 
 use Forge\Core\Helpers\App;
 use Forge\Core\Traits\OutputHelper;
-use Forge\Modules\Database\Contracts\DatabaseInterface;
+use Forge\Modules\ForgeDatabase\Contracts\DatabaseInterface;
 use Forge\Modules\ForgeOrm\Schema\Blueprint;
 use Forge\Modules\ForgeOrm\Schema\Schema;
 

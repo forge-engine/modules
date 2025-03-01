@@ -6,6 +6,17 @@ This repository serves as the official module registry for the Forge Engine. It 
 
 Here's a list of the official modules currently available in this registry:
 
+- forge-database
+- forge-api
+- forge-debug-bar
+- forge-error-handler
+- forge-forge-logger
+- forge-mark-down
+- forge-orm
+- forge-static-gen
+- forge-storage
+- forge-test
+- forge-view-engine
 *   **forge-router**:
     *   Description:  Provides robust routing capabilities for your Forge Engine applications, handling URL mapping and request dispatch. 🚀
 *   **forge-logger**:

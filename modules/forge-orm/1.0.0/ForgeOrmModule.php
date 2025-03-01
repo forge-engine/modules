@@ -6,7 +6,7 @@ use Forge\Core\Contracts\Command\CommandInterface;
 use Forge\Core\Contracts\Modules\ForgeOrm\CollectionInterface;
 use Forge\Core\Resources\CollectionResource;
 use Forge\Core\Resources\ModelResource;
-use Forge\Modules\Database\Contracts\DatabaseInterface;
+use Forge\Modules\ForgeDatabase\Contracts\DatabaseInterface;
 use Forge\Modules\ForgeOrm\Commands\MigrateCommand;
 use Forge\Modules\ForgeOrm\Commands\MigrateRollbackCommand;
 use Forge\Modules\ForgeOrm\Commands\SeedCommand;

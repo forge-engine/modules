@@ -3,7 +3,7 @@
 namespace Forge\Modules\ForgeStorage\Drivers;
 
 use Forge\Core\Helpers\UUID;
-use Forge\Modules\Database\Contracts\DatabaseInterface;
+use Forge\Modules\ForgeDatabase\Contracts\DatabaseInterface;
 use Forge\Modules\ForgeStorage\Contracts\StorageInterface;
 use Forge\Core\Helpers\App;
 

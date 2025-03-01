@@ -3,7 +3,7 @@
 namespace Forge\Modules\ForgeOrm;
 
 use Forge\Core\Helpers\App;
-use Forge\Modules\Database\Contracts\DatabaseInterface;
+use Forge\Modules\ForgeDatabase\Contracts\DatabaseInterface;
 use Forge\Modules\ForgeOrm\Relations\Relation;
 
 class QueryBuilder
