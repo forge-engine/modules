@@ -98,6 +98,15 @@
             }
         }
     },
+    "forge-database": {
+        "latest": "1.0.0",
+        "versions": {
+            "1.0.0": {
+                "description": "Initial Database",
+                "url": "forge-database/1.0.0"
+            }
+        }
+    },
     "forge-test": {
         "latest": "1.0.0",
         "versions": {
