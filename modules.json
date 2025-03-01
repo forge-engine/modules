@@ -44,6 +44,15 @@
             }
         }
     },
+    "forge-static-gen": {
+        "latest": "1.0.0",
+        "versions": {
+            "1.0.0": {
+                "description": "Initial Static Generator",
+                "url": "forge-static-gen/1.0.0"
+            }
+        }
+    },
     "forge-test": {
         "latest": "1.0.0",
         "versions": {
