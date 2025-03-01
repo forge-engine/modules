@@ -62,6 +62,24 @@
             }
         }
     },
+    "forge-mark-down": {
+        "latest": "1.0.0",
+        "versions": {
+            "1.0.0": {
+                "description": "Initial Mark Down Parser",
+                "url": "forge-mark-down/1.0.0"
+            }
+        }
+    },
+    "forge-debug-bar": {
+        "latest": "1.0.0",
+        "versions": {
+            "1.0.0": {
+                "description": "Initial Debug Bar",
+                "url": "forge-debug-bar/1.0.0"
+            }
+        }
+    },
     "forge-test": {
         "latest": "1.0.0",
         "versions": {
