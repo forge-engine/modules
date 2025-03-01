@@ -1,4 +1,13 @@
 {
+    "forge-package-manager": {
+        "latest": "1.0.0",
+        "versions": {
+            "1.0.0": {
+                "description": "Initial package manager",
+                "url": "forge-package-manager/1.0.0"
+            }
+        }
+    },
     "forge-router": {
         "latest": "1.0.0",
         "versions": {
