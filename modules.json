@@ -107,6 +107,15 @@
             }
         }
     },
+    "forge-testing": {
+        "latest": "1.0.0",
+        "versions": {
+            "1.0.0": {
+                "description": "Initial Testing Suite",
+                "url": "forge-testing/1.0.0"
+            }
+        }
+    },
     "forge-test": {
         "latest": "1.0.0",
         "versions": {
