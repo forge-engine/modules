@@ -89,6 +89,15 @@
             }
         }
     },
+    "forge-error-handler": {
+        "latest": "1.0.0",
+        "versions": {
+            "1.0.0": {
+                "description": "Initial Error Handler",
+                "url": "forge-error-handler/1.0.0"
+            }
+        }
+    },
     "forge-test": {
         "latest": "1.0.0",
         "versions": {

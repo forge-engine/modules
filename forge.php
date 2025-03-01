@@ -61,7 +61,7 @@ function handlePublishCommand(array $arguments): void
         echo "Staging zip file with git...\n";
         if (gitAdd($zipFilePath)) {
             echo "Zip file staged.\n";
-
+            gitAdd('modules.json');
             echo "Committing changes with git...\n";
             if (gitCommit("Add zip for {$moduleName}@{$version}")) {
                 echo "Changes committed.\n";
