@@ -5,7 +5,7 @@ namespace Forge\Modules\ForgePackageManager\Src\Commands;
 use Forge\Core\Contracts\Command\CommandInterface;
 use Forge\Core\Helpers\App;
 use Forge\Core\Traits\OutputHelper;
-use Forge\Modules\ForgePackageManager\Src\Services\ForgePackageManager;
+use Forge\Modules\ForgePackageManager\Src\Services\PackageManager;
 
 class InstallModuleCommand implements CommandInterface
 {
@@ -35,8 +35,8 @@ class InstallModuleCommand implements CommandInterface
 
 
         try {
-            /** @var ForgePackageManager $packageManager */
-            $packageManager = App::getContainer()->get(ForgePackageManager::class);
+            /** @var PackageManager $packageManager */
+            $packageManager = App::getContainer()->get(PackageManager::class);
             $packageManager->installModule($moduleName, $version);
             return 0;
         } catch (\Throwable $e) {
