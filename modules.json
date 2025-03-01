@@ -32,6 +32,10 @@
             "1.0.0": {
                 "description": "Initial View Engine",
                 "url": "forge-view-engine/1.0.0"
+            },
+            "1.0.1": {
+                "description": "Added compatibility with Forge Static Html generator",
+                "url": "forge-view-engine/1.0.1"
             }
         }
     },
