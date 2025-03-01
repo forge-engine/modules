@@ -53,6 +53,15 @@
             }
         }
     },
+    "forge-orm": {
+        "latest": "1.0.0",
+        "versions": {
+            "1.0.0": {
+                "description": "Initial Orm",
+                "url": "forge-orm/1.0.0"
+            }
+        }
+    },
     "forge-test": {
         "latest": "1.0.0",
         "versions": {
