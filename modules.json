@@ -57,6 +57,15 @@
             }
         }
     },
+    "forge-static-html": {
+        "latest": "1.0.0",
+        "versions": {
+            "1.0.0": {
+                "description": "Initial Html Static Generator",
+                "url": "forge-static-html/1.0.0"
+            }
+        }
+    },
     "forge-orm": {
         "latest": "1.0.0",
         "versions": {
