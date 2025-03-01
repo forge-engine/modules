@@ -80,6 +80,15 @@
             }
         }
     },
+    "forge-api": {
+        "latest": "0.0.1",
+        "versions": {
+            "0.0.1-dev": {
+                "description": "Initial Forge Dedicate API Module",
+                "url": "forge-api/0.0.1"
+            }
+        }
+    },
     "forge-test": {
         "latest": "1.0.0",
         "versions": {
