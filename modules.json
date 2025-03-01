@@ -35,6 +35,15 @@
             }
         }
     },
+    "forge-storage": {
+        "latest": "1.0.0",
+        "versions": {
+            "1.0.0": {
+                "description": "Initial Storage",
+                "url": "forge-storage/1.0.0"
+            }
+        }
+    },
     "forge-test": {
         "latest": "1.0.0",
         "versions": {
