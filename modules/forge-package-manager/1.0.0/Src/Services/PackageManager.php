@@ -13,7 +13,7 @@ class PackageManager implements PackageManagerInterface
     use OutputHelper;
 
     private const OFFICIAL_REGISTRY_NAME = 'forge-engine-modules';
-    private const OFFICIAL_REGISTRY_BASE_URL = 'https://github.com/forge-engine/modules-v2';
+    private const OFFICIAL_REGISTRY_BASE_URL = 'https://github.com/forge-engine/modules';
     private const OFFICIAL_REGISTRY_BRANCH = 'main';
 
     private string $modulesPath;

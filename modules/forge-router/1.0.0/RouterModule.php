@@ -1,6 +1,6 @@
 <?php
 
-namespace Forge\Modules\Router;
+namespace Forge\Modules\ForgeRouter;
 
 use Forge\Core\Contracts\Modules\ModulesInterface;
 use Forge\Core\Contracts\Modules\RouterInterface;

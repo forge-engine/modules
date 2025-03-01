@@ -1,6 +1,6 @@
 <?php
 
-namespace Forge\Modules\Router;
+namespace Forge\Modules\ForgeRouter;
 
 use Forge\Core\Contracts\Modules\RouterInterface;
 use Forge\Core\DependencyInjection\Container;
@@ -14,6 +14,12 @@ class BasicRouter implements RouterInterface
     private string $currentGroupPrefix = '';
     private array $currentGroupMiddleware = [];
     private ?array $currentRoute = null;
+    private array $reservedPaths = [
+        '/_debug',
+        '/_health',
+        '/_forge/info',
+        '/spark'
+    ];
 
     public function __construct(
         private Container $container
@@ -33,6 +39,10 @@ class BasicRouter implements RouterInterface
             $prefixedUri = rtrim($prefix, '/');
         }
 
+        if ($this->isReservedPath($prefixedUri)) {
+            throw new \InvalidArgumentException("Route '{$prefixedUri}' is reserved and cannot be overridden.");
+        }
+
         $routeMiddleware = array_merge($this->currentGroupMiddleware, $middleware);
 
         $this->routes[] = [
@@ -41,6 +51,18 @@ class BasicRouter implements RouterInterface
             'handler' => $handler,
             'middleware' => $routeMiddleware
         ];
+    }
+
+    private function isReservedPath(string $uri): bool
+    {
+        return in_array($uri, $this->reservedPaths, true);
+    }
+
+    public function reservePath(string $uri): void
+    {
+        if (!in_array($uri, $this->reservedPaths, true)) {
+            $this->reservedPaths[] = $uri;
+        }
     }
 
     public function handleRequest(Request $request): Response
@@ -52,7 +74,7 @@ class BasicRouter implements RouterInterface
                 return $this->resolveMiddlewarePipeline($route, $request);
             }
         }
-        return new Response(404, 'Not Found');
+        return (new Response())->setContent('Not found')->setStatusCode(404);
     }
 
     private function resolveMiddlewarePipeline(array $route, Request $request): Response
@@ -91,8 +113,20 @@ class BasicRouter implements RouterInterface
             $normalizedRequestUri = rtrim($normalizedRequestUri, '/');
         }
 
-        return $route['method'] === $request->getMethod()
-            && $routeUri === $normalizedRequestUri;
+        // Convert route URI to a regex pattern to capture parameters
+        $routePattern = preg_replace('/\{(\w+)\}/', '(?P<$1>[^/]+)', $routeUri);
+        $routePattern = '@^' . $routePattern . '$@';
+
+        if (preg_match($routePattern, $normalizedRequestUri, $matches)) {
+            foreach ($matches as $key => $value) {
+                if (!is_int($key)) {
+                    $request->setAttribute($key, $value);
+                }
+            }
+            return $route['method'] === $request->getMethod();
+        }
+
+        return false;
     }
 
     private function resolveHandler(array|callable $handler, Request $request): Response

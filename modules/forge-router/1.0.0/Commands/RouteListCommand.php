@@ -1,6 +1,6 @@
 <?php
 
-namespace Forge\Modules\Router\Commands;
+namespace Forge\Modules\ForgeRouter\Commands;
 
 use Forge\Core\Contracts\Command\CommandInterface;
 use Forge\Core\DependencyInjection\Container;
