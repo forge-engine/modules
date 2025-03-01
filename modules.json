@@ -1,14 +1,10 @@
 {
     "forge-router": {
-        "latest": "1.1.0",
+        "latest": "1.0.0",
         "versions": {
             "1.0.0": {
                 "description": "Initial Router",
                 "url": "forge-router/1.0.0"
-            },
-            "1.1.0": {
-                "description": "Enhanced Router",
-                "url": "forge-router/1.1.0"
             }
         }
     },
@@ -18,15 +14,6 @@
             "1.0.0": {
                 "description": "Initial Logger",
                 "url": "forge-logger/1.0.0"
-            }
-        }
-    },
-    "forge-test": {
-        "latest": "1.0.0",
-        "versions": {
-            "1.0.0": {
-                "description": "Initial Test",
-                "url": "forge-test/1.0.0"
             }
         }
     }
