@@ -76,7 +76,7 @@
             },
             "1.0.1": {
                 "description": "Version 1.0.1 of forge-static-html",
-                "url": "forge-static-html/1.0.1/1.0.1.zip",
+                "url": "forge-static-html/1.0.1",
                 "integrity": "31e66a532b1867856e6652fe7607eb2774e1491a4a14e643342d70d7fdbac501"
             }
         }
