@@ -139,11 +139,16 @@
         }
     },
     "forge-module-test": {
-        "latest": "1.0.0",
+        "latest": "1.0.1",
         "versions": {
             "1.0.0": {
                 "description": "Version 1.0.0 of forge-module-test",
                 "url": "forge-module-test/1.0.0/1.0.0.zip",
+                "integrity": "a13f05e2140041ed683f831389cb87cd9033ed6b9cc2343c4d56928f9e93df53"
+            },
+            "1.0.1": {
+                "description": "Version 1.0.1 of forge-module-test",
+                "url": "forge-module-test/1.0.1/1.0.1.zip",
                 "integrity": "a13f05e2140041ed683f831389cb87cd9033ed6b9cc2343c4d56928f9e93df53"
             }
         }
