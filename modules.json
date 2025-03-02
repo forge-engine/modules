@@ -62,7 +62,7 @@
             },
             "1.0.1": {
                 "description": "Version 1.0.1 of forge-static-gen",
-                "url": "forge-static-gen/1.0.1/1.0.1.zip",
+                "url": "forge-static-gen/1.0.1",
                 "integrity": "8586ed36d89478d115acbdbdee35fad36303aaa4b19c13ff43814893193e52b3"
             }
         }
