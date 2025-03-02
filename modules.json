@@ -54,11 +54,16 @@
         }
     },
     "forge-static-gen": {
-        "latest": "1.0.0",
+        "latest": "1.0.1",
         "versions": {
             "1.0.0": {
                 "description": "Initial Static Generator",
                 "url": "forge-static-gen/1.0.0"
+            },
+            "1.0.1": {
+                "description": "Version 1.0.1 of forge-static-gen",
+                "url": "forge-static-gen/1.0.1/1.0.1.zip",
+                "integrity": "8586ed36d89478d115acbdbdee35fad36303aaa4b19c13ff43814893193e52b3"
             }
         }
     },
