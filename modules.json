@@ -8,8 +8,8 @@
             },
             "1.0.1": {
                 "description": "Version 1.0.1 of forge-package-manager",
-                "url": "forge-package-manager/1.0.1/1.0.1.zip",
-                "integrity": "e19c753e52880e69b9354525a0a54c912f0bb8ff41967a1b65fb8b6a89157223"
+                "url": "forge-package-manager/1.0.1",
+                "integrity": "02187d075d87c21e4b181b651435f35ef780d1d1cd42ef16fef24d939da4f175"
             }
         }
     },
