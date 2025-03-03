@@ -147,11 +147,16 @@
         }
     },
     "forge-database": {
-        "latest": "1.0.0",
+        "latest": "1.0.1",
         "versions": {
             "1.0.0": {
                 "description": "Initial Database",
                 "url": "forge-database/1.0.0"
+            },
+            "1.0.1": {
+                "description": "Version 1.0.1 of forge-database",
+                "url": "forge-database/1.0.1",
+                "integrity": "5cbdb8bc992a7af9d64fcd71207586c4c3141b03e561e2a912b15f1b46ccfcfb"
             }
         }
     },
