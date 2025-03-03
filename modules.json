@@ -105,7 +105,7 @@
         }
     },
     "forge-debug-bar": {
-        "latest": "1.0.1",
+        "latest": "1.0.2",
         "versions": {
             "1.0.0": {
                 "description": "Initial Debug Bar",
@@ -115,6 +115,11 @@
                 "description": "Version 1.0.1 of forge-debug-bar",
                 "url": "forge-debug-bar/1.0.1",
                 "integrity": "ec489ef385f55f8545ac47c4a8ca940d10a10883505469df60024496c890e833"
+            },
+            "1.0.2": {
+                "description": "Version 1.0.2 of forge-debug-bar",
+                "url": "forge-debug-bar/1.0.2",
+                "integrity": "b7a42930986d10f9262927504ac59803076b154c045f6d31b62e0982c7486ca9"
             }
         }
     },
