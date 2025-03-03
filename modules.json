@@ -68,7 +68,7 @@
         }
     },
     "forge-static-html": {
-        "latest": "1.0.1",
+        "latest": "1.0.2",
         "versions": {
             "1.0.0": {
                 "description": "Initial Html Static Generator",
@@ -78,6 +78,11 @@
                 "description": "Version 1.0.1 of forge-static-html",
                 "url": "forge-static-html/1.0.1",
                 "integrity": "31e66a532b1867856e6652fe7607eb2774e1491a4a14e643342d70d7fdbac501"
+            },
+            "1.0.2": {
+                "description": "Version 1.0.2 of forge-static-html",
+                "url": "forge-static-html/1.0.2",
+                "integrity": "81672d5c551477b58d872271aea85b06fcb2ca31f29f3e9b370599fff2d08e7b"
             }
         }
     },
