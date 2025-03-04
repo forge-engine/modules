@@ -192,5 +192,15 @@
                 "integrity": "a13f05e2140041ed683f831389cb87cd9033ed6b9cc2343c4d56928f9e93df53"
             }
         }
+    },
+    "forge-explicit-orm": {
+        "latest": "0.0.1",
+        "versions": {
+            "0.0.1": {
+                "description": "Version 0.0.1 of forge-explicit-orm",
+                "url": "forge-explicit-orm/0.0.1",
+                "integrity": "c85f6f879af6e777430a4a2e45360b27343b70425f9b88829039490361856168"
+            }
+        }
     }
 }
