@@ -1,6 +1,6 @@
 {
     "forge-package-manager": {
-        "latest": "1.0.2",
+        "latest": "1.0.3",
         "versions": {
             "1.0.0": {
                 "description": "Initial package manager",
@@ -15,6 +15,11 @@
                 "description": "Version 1.0.2 of forge-package-manager",
                 "url": "forge-package-manager/1.0.2",
                 "integrity": "22a3b66a2b3c779ea7c0bce0bc3e5856b1245822e6f44d6d5a31ac5fec258451"
+            },
+            "1.0.3": {
+                "description": "Version 1.0.3 of forge-package-manager",
+                "url": "forge-package-manager/1.0.3",
+                "integrity": "740ae6cf60570519bf5f3ba85ed007cd7ef8f4eaa50f66cd7ff4b3d573e469ef"
             }
         }
     },
