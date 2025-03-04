@@ -137,15 +137,6 @@
             }
         }
     },
-    "forge-error-handler": {
-        "latest": "1.0.0",
-        "versions": {
-            "1.0.0": {
-                "description": "Initial Error Handler",
-                "url": "forge-error-handler/1.0.0"
-            }
-        }
-    },
     "forge-database": {
         "latest": "1.0.1",
         "versions": {
@@ -200,6 +191,16 @@
                 "description": "Version 0.0.1 of forge-explicit-orm",
                 "url": "forge-explicit-orm/0.0.1",
                 "integrity": "c85f6f879af6e777430a4a2e45360b27343b70425f9b88829039490361856168"
+            }
+        }
+    },
+    "forge-error-handler": {
+        "latest": "0.0.1",
+        "versions": {
+            "0.0.1": {
+                "description": "Version 0.0.1 of forge-error-handler",
+                "url": "forge-error-handler/0.0.1",
+                "integrity": "e0aee4831f5710a222cfc8127d5aa761a266a7ad255bc6601b590a28c2c7ff83"
             }
         }
     }
