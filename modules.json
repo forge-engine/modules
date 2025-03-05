@@ -102,11 +102,16 @@
         }
     },
     "forge-orm": {
-        "latest": "1.0.0",
+        "latest": "1.0.1",
         "versions": {
             "1.0.0": {
                 "description": "Initial Orm",
                 "url": "forge-orm/1.0.0"
+            },
+            "1.0.1": {
+                "description": "Version 1.0.1 of forge-orm",
+                "url": "forge-orm/1.0.1",
+                "integrity": "dfa58cdfbf4ef9182e9a4c2765ccb66b41168cc1a52894c993012af0adcc7d72"
             }
         }
     },
