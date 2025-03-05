@@ -42,7 +42,7 @@
         }
     },
     "forge-view-engine": {
-        "latest": "1.0.1",
+        "latest": "1.0.2",
         "versions": {
             "1.0.0": {
                 "description": "Initial View Engine",
@@ -51,6 +51,11 @@
             "1.0.1": {
                 "description": "Added compatibility with Forge Static Html generator",
                 "url": "forge-view-engine/1.0.1"
+            },
+            "1.0.2": {
+                "description": "Version 1.0.2 of forge-view-engine",
+                "url": "forge-view-engine/1.0.2",
+                "integrity": "52c3d351503d1da34471f0d01b4c773a9f9fcb4498531c78d38e974cb223b0f6"
             }
         }
     },
