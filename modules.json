@@ -228,5 +228,15 @@
                 "integrity": "6ecfe86f5ad34886736df8c6f0cae4a06e19c7f084e57d199ed734a97fddf5f8"
             }
         }
+    },
+    "forge-auth": {
+        "latest": "0.0.1",
+        "versions": {
+            "0.0.1": {
+                "description": "Version 0.0.1 of forge-auth",
+                "url": "forge-auth/0.0.1",
+                "integrity": "c232998b238f62c4879d66b37b717c1e67b70710d519dc79833cb2dd3db292e4"
+            }
+        }
     }
 }
