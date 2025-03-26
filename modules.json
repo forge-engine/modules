@@ -8,5 +8,15 @@
                 "integrity": "c75c3c9cde075dc95c008cd8aaf1aeb603f9da16bddcacbddacc5faf5c191901"
             }
         }
+    },
+    "forge-logger": {
+        "latest": "0.1.0",
+        "versions": {
+            "0.1.0": {
+                "description": "Version 0.1.0 of forge-logger",
+                "url": "forge-logger/0.1.0",
+                "integrity": "8def0730460d208b0de2b339e79d44ca8d5cbe6b36409e5c406c95d7d2808e4a"
+            }
+        }
     }
 }
