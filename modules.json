@@ -58,5 +58,15 @@
                 "integrity": "50231fe45f78fa4ae04d0ba0a355ba6c2648407fa735db12e4481fe30c05418f"
             }
         }
+    },
+    "forge-nexus": {
+        "latest": "0.1.0",
+        "versions": {
+            "0.1.0": {
+                "description": "Version 0.1.0 of forge-nexus",
+                "url": "forge-nexus/0.1.0",
+                "integrity": "f9f7165cfd7aad8197c13d89ae47b58cf48693cc87952a54c153c95db94e6243"
+            }
+        }
     }
 }
