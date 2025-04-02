@@ -68,5 +68,15 @@
                 "integrity": "10b7e04506d349774127191557b3c40a4ac6825e39ddddba0a895ed2529b26a8"
             }
         }
+    },
+    "forge-hub": {
+        "latest": "0.1.0",
+        "versions": {
+            "0.1.0": {
+                "description": "Version 0.1.0 of forge-hub",
+                "url": "forge-hub/0.1.0",
+                "integrity": "b38750a72de26e74a193792009f98fa9e347e18a0b696c9cd6a5e502efd0d7b2"
+            }
+        }
     }
 }
