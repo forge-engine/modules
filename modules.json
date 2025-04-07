@@ -98,5 +98,15 @@
                 "integrity": "344b0778624e745db4395642a13ba10bbe4bc6de51d58ee9ea8aaaad6f6871c5"
             }
         }
+    },
+    "forge-welcome": {
+        "latest": "0.1.0",
+        "versions": {
+            "0.1.0": {
+                "description": "Version 0.1.0 of forge-welcome",
+                "url": "forge-welcome/0.1.0",
+                "integrity": "45c88c138cdb3db8457031697263ccda6025f20ffcdca66955629e4d0b2ebd05"
+            }
+        }
     }
 }
