@@ -1,45 +1,66 @@
-# 📦 Forge Framework's Official Goodies Stash!
+# 📦 Forge Framework – My Own Module Stash
 
-Hey again! 👋 So, this is the official spot where all the cool modules for the Forge Framework hang out. Think of it like our curated collection of building blocks.
+Hey 👋 Welcome to the place where I store all the extra bits and pieces I’ve built for [Forge](https://github.com/forge-engine/framework) — my personal PHP framework.
 
-You know when you run that command `php forge.php package:install awesome-module@some-version`? Well, this is where that command comes to find those modules! It's the official registry, but the awesome thing is, you can totally create your own registry too – more on that later!
+This repo isn’t some polished package bazaar — it’s more like my personal toolbox. But if you find something useful here, feel free to use it, tweak it, or fork it to fit your thing. That’s the spirit Forge is built on.
 
-Oh, and a little heads-up: any module name that starts with `forge-` is special. Our official package manager will always grab those from this very stash. But hey, if you decide to roll your own package manager or just want to do things differently, that's totally up to you!
+### ⛏️ About This Registry
 
-## Official Modules You Can Grab ✅
+When you run a command like:
 
-Here are the official modules we've got for you right now:
+```bash
+php forge.php package:install forge-auth@0.1.0
+```
 
-- `forge-database` (For all your database needs)
-- `forge-debug-bar` (Your handy debugging friend)
-- `forge-error-handler` (Catches those oopsies gracefully)
-- `forge-logger` (Keeps track of what's happening in your app)
-- `forge-mark-down` (Makes working with Markdown a breeze)
-- `forge-static-gen` (Perfect for building static sites)
-- `forge-storage` (For handling file storage)
-- `forge-testing` (Helps you write awesome tests)
-- `forge-view-engine` (For rendering your web pages)
+The package manager knows to come here and look in the `modules/` folder. All official `forge-*` modules live here. If you’re building your own registry (which is 100% encouraged), you can point the package manager to your own repo and structure it the same way.
 
-Just to give you a little more info on a couple:
+This repo just happens to be the **default** registry.
 
-* **`forge-logger`**: This guy helps you manage all your application logs. You can set different levels of logging and send them to various places – super useful for debugging and keeping an eye on things. 📝
-* **`forge-package-manager`**: This is the tool that lets you easily install and manage other modules in your Forge projects. Pretty important, right? ⚙️
+---
 
-You can dive into the code for any of these modules – just head over to the `modules/` folder in this repository. Each module has its own folder, and then folders for each version (like `modules/forge-router/1.0.0/`).
+### ✅ Currently Available Modules
 
-## Want to Make Your Own Module Stash? 🛠️
+Here’s what’s in the stash right now:
 
-Forge is all about being flexible, so while we have these official modules, we'd love for you to create your own module registries too! Maybe you have a set of modules that are specific to your projects, or you want to share your creations with the world.
+- `forge-auth` – Basic auth scaffolding (login, registration, etc.)
+- `forge-error-handler` – Global error catcher, for CLI and web
+- `forge-hub` – An administration panel on which you run cli commands, see framework metrics and stats, etc (WIP)
+- `forge-logger` – Simple and effective logging
+- `forge-nexus` – A CMS I'm building (WIP, but cool stuff happening)
+- `forge-notifications` – Email/SMS/Push support (WIP)
+- `forge-package-manager` – Lets you install/manage modules easily
+- `forge-storage` – File storage similar to an s3, it have temporary urls, an administration panel (works with local, S3, etc.)
+- `forge-ui` – UI components, slowly building what I need
+- `forge-welcome` – The welcome screen you see in `forge-starter`
 
-**Important Note (For Now): Public Repos Only** 🔑
-Just a heads-up for the current version of Forge's package manager: your custom module registry needs to be a **public repository** (like on GitHub). That's because the package manager currently fetches info and downloads modules using those public GitHub links. We might add support for private registries later on.
+These are built based on what I need for my projects. Some are stable, some are in progress. That’s just the nature of a living, personal framework.
 
-Here's the basic idea of how to set up your own module registry:
+---
 
-1. **Think of it Like This Repo**: A module registry is basically a Git repository set up in a specific way. You could even start by cloning this one as a template:
+### 🛠️ Want to Make Your Own?
 
-   ```bash
-   git clone [https://github.com/forge-engine/modules-v2](https://github.com/forge-engine/modules-v2) my-forge-registry
-   cd my-forge-registry
-   # If you want a completely fresh start, you can remove our modules
-   rm -rf modules/*
+Forge doesn’t lock you into anything. You can totally set up your own registry and use it with the same package manager.
+
+To do that:
+
+1. Create a public GitHub repo
+2. Copy the folder structure from this one (`modules/module-name/version/`)
+3. Update your own `PackageManagerService` to point to your custom registry
+
+If you forked Forge, you’ll probably want to:
+
+- Change the registry URL
+- Change the default module prefix (if you don’t want to use `forge-*`)
+
+You’re in control.
+
+> ⚠️ Right now the package manager only supports **public repositories** because it fetches from raw GitHub URLs. Private repo support might come later.
+
+If you’re making your own modules or registry, feel free to use this repo as a reference — or even a starting point:
+
+```bash
+git clone https://github.com/forge-engine/modules my-forked-registry
+```
+
+Then go build your own thing. That’s the Forge way.
+
