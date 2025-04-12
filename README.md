@@ -54,8 +54,6 @@ If you forked Forge, you’ll probably want to:
 
 You’re in control.
 
-> ⚠️ Right now the package manager only supports **public repositories** because it fetches from raw GitHub URLs. Private repo support might come later.
-
 If you’re making your own modules or registry, feel free to use this repo as a reference — or even a starting point:
 
 ```bash
