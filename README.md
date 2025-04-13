@@ -31,6 +31,7 @@ Here’s what’s in the stash right now:
 - `forge-package-manager` – Lets you install/manage modules easily
 - `forge-storage` – File storage similar to an s3, it have temporary urls, an administration panel (works with local, S3, etc.)
 - `forge-ui` – UI components, slowly building what I need
+- `forge-testing` – Testing Suite, slowly building what I need
 - `forge-welcome` – The welcome screen you see in `forge-starter`
 
 These are built based on what I need for my projects. Some are stable, some are in progress. That’s just the nature of a living, personal framework.
