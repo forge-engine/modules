@@ -133,5 +133,15 @@
                 "integrity": "2bfbdbb73aeefcfa9dadb9a64fdadb83ed09506d44079e2f1c7dea0419278c5b"
             }
         }
+    },
+    "forge-events": {
+        "latest": "0.1.0",
+        "versions": {
+            "0.1.0": {
+                "description": "Version 0.1.0 of forge-events",
+                "url": "forge-events/0.1.0",
+                "integrity": "45e57990ee9b34f57bce1c8ec10d9c5815fd531e5a11c612ee77c6e44d2fcf6d"
+            }
+        }
     }
 }
