@@ -155,12 +155,17 @@
         }
     },
     "forge-wire": {
-        "latest": "0.1.0",
+        "latest": "1.0.1",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of forge-wire",
                 "url": "forge-wire/0.1.0",
                 "integrity": "9f3be6012d40c509d7421db276ef53b03f8602fe7b4d91bc709481720a438182"
+            },
+            "1.0.1": {
+                "description": "Version 1.0.1 of forge-wire",
+                "url": "forge-wire/1.0.1",
+                "integrity": "a998afd6b345fba8fee5a16c33286a01bf2bbfb9a7cdb51e6ded46c5d76ec7c7"
             }
         }
     }
