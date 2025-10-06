@@ -105,12 +105,17 @@
         }
     },
     "forge-welcome": {
-        "latest": "0.1.0",
+        "latest": "0.1.2",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of forge-welcome",
                 "url": "forge-welcome/0.1.0",
                 "integrity": "a35f7836a5112166787e3d15fac60422de175fca15d74017c5ca37fc11d2c321"
+            },
+            "0.1.2": {
+                "description": "Version 0.1.2 of forge-welcome",
+                "url": "forge-welcome/0.1.2",
+                "integrity": "30938dd173fe436325ea1919ac5f4d58810e46e5cefd08203315a301a23361cc"
             }
         }
     },
