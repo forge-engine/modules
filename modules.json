@@ -183,5 +183,15 @@
                 "integrity": "e94ad055116129b439562834fde811299151a7732290657055d51e4c2180e3db"
             }
         }
+    },
+    "forge-tailwind": {
+        "latest": "0.0.1",
+        "versions": {
+            "0.0.1": {
+                "description": "Version 0.0.1 of forge-tailwind",
+                "url": "forge-tailwind/0.0.1",
+                "integrity": "4835c2869750bbc78c45feedff21ba9a6c46c18e79aa0ca8e21e1bd4af5f8cbd"
+            }
+        }
     }
 }
