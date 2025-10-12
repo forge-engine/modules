@@ -208,5 +208,15 @@
                 "integrity": "e99ec1c1d551363a3500dadd23a0c1c71e566a50c1a9de61437bbca41773ee12"
             }
         }
+    },
+    "forge-debug-bar": {
+        "latest": "0.1.1",
+        "versions": {
+            "0.1.1": {
+                "description": "Version 0.1.1 of forge-debug-bar",
+                "url": "forge-debug-bar/0.1.1",
+                "integrity": "94e457c6bf92033f2dd5a8f4cf422d65f7994ac6e8fe88cf1c7a125bd2015aa0"
+            }
+        }
     }
 }
