@@ -295,7 +295,7 @@
         }
     },
     "forge-tailwind": {
-        "latest": "0.1.1",
+        "latest": "0.1.2",
         "versions": {
             "0.0.1": {
                 "description": "Version 0.0.1 of forge-tailwind",
@@ -306,6 +306,11 @@
                 "description": "Version 0.1.1 of forge-tailwind",
                 "url": "forge-tailwind/0.1.1",
                 "integrity": "9fe6b2d04385b8453630b0e323438249d35b3f904db6971d5bf2e4dc2640afdf"
+            },
+            "0.1.2": {
+                "description": "Version 0.1.2 of forge-tailwind",
+                "url": "forge-tailwind/0.1.2",
+                "integrity": "13f6792fedf7a0827198a9d92a6eb685b3e67d91c71ca1f3f90f7c8ff8d1306f"
             }
         }
     },
