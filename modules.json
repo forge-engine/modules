@@ -383,5 +383,15 @@
                 "integrity": "ceee30944ddf0d0d154032098dddd60fd551906064ab8ad434d7451dbf07eeeb"
             }
         }
+    },
+    "forge-static-html": {
+        "latest": "0.1.1",
+        "versions": {
+            "0.1.1": {
+                "description": "Version 0.1.1 of forge-static-html",
+                "url": "forge-static-html/0.1.1",
+                "integrity": "1e755c0cf4848b3945ca733e516f918ee5991f27f514c97160844b4a8b21eac0"
+            }
+        }
     }
 }
