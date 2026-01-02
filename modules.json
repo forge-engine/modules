@@ -485,7 +485,7 @@
         }
     },
     "forge-database-sql": {
-        "latest": "0.1.1",
+        "latest": "0.1.2",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of forge-database-sql",
@@ -496,6 +496,11 @@
                 "description": "Version 0.1.1 of forge-database-sql",
                 "url": "forge-database-sql/0.1.1",
                 "integrity": "3d3e79623eabce1f3faf3c0c9c6c2ee4f06322afc0d6ee3d4fa92be62de58cca"
+            },
+            "0.1.2": {
+                "description": "Version 0.1.2 of forge-database-sql",
+                "url": "forge-database-sql/0.1.2",
+                "integrity": "c01843129de06f945dab9d3a1ccd73a043a23076212947b806d51c95d3698292"
             }
         }
     },
