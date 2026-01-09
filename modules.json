@@ -95,7 +95,7 @@
         }
     },
     "forge-auth": {
-        "latest": "0.2.6",
+        "latest": "0.3.0",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of forge-auth",
@@ -176,6 +176,11 @@
                 "description": "Version 0.2.6 of forge-auth",
                 "url": "forge-auth/0.2.6",
                 "integrity": "6c38807f6b94ae3bf670d559c819d1965a2e52ecef38f5a1ed18f87329a51888"
+            },
+            "0.3.0": {
+                "description": "Version 0.3.0 of forge-auth",
+                "url": "forge-auth/0.3.0",
+                "integrity": "d00dd4b82f66c7a212f0352200ae7440131c0e53f2290373aa1653822c8d30ff"
             }
         }
     },
