@@ -785,12 +785,17 @@
         }
     },
     "forge-deployment": {
-        "latest": "0.1.0",
+        "latest": "0.2.0",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of forge-deployment",
                 "url": "forge-deployment/0.1.0",
                 "integrity": "330a0620dfcbc9fed1f871083ebf2e2f4a50ec8684979e7ff1ba96f7b10479e1"
+            },
+            "0.2.0": {
+                "description": "Version 0.2.0 of forge-deployment",
+                "url": "forge-deployment/0.2.0",
+                "integrity": "c2fbc48df46040ee97e0ac435bd2ed787608903b2b465e4db1398e837991fadf"
             }
         }
     },
