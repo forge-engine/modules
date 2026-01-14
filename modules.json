@@ -793,5 +793,15 @@
                 "integrity": "330a0620dfcbc9fed1f871083ebf2e2f4a50ec8684979e7ff1ba96f7b10479e1"
             }
         }
+    },
+    "forge-components": {
+        "latest": "0.1.0",
+        "versions": {
+            "0.1.0": {
+                "description": "Version 0.1.0 of forge-components",
+                "url": "forge-components/0.1.0",
+                "integrity": "8c981df40119b03311fea3c4f913efe02dad8180295d56e2f7653205582ca064"
+            }
+        }
     }
 }
