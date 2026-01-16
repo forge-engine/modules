@@ -275,12 +275,17 @@
         }
     },
     "forge-notification": {
-        "latest": "0.1.0",
+        "latest": "0.2.0",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of forge-notification",
                 "url": "forge-notification/0.1.0",
                 "integrity": "344b0778624e745db4395642a13ba10bbe4bc6de51d58ee9ea8aaaad6f6871c5"
+            },
+            "0.2.0": {
+                "description": "Version 0.2.0 of forge-notification",
+                "url": "forge-notification/0.2.0",
+                "integrity": "c63d144db93ddbefb529adaa1c3bf31a23ac666d6970ce92257eb74a0c30ebc1"
             }
         }
     },
