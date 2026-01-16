@@ -43,7 +43,7 @@ This repo just happens to be the **default** registry.
 | ForgeNotification | Multi-channel notification system with provider support, fluent API, and async queue integration | 0.1.0 | MIT | Forge Team |
 | ForgePackageManager | A Package Manager By Forge | 3.0.0 | MIT | Forge Team |
 | ForgeSqlOrm | SQL ORM Support (SQLite, MySQL, PostgreSQL) | 0.3.0 | MIT | Forge Team |
-| ForgeStaticGen | A Basic Static Site Generator by Forge | 0.1.1 | MIT | Forge Team |
+| ForgeStaticGen | A Basic Static Site Generator by Forge | 0.2.0 | MIT | Forge Team |
 | ForgeStorage | Simple file upload storage module with multiple provider support | 1.1.0 | MIT | Forge Team |
 | ForgeTailwind | A tailwind module by forge | 0.2.0 | MIT | Forge Team |
 | ForgeTesting | A Test Suite Module By Forge | 0.3.0 | MIT | Forge Team |
