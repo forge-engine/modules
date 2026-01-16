@@ -49,7 +49,7 @@ This repo just happens to be the **default** registry.
 | ForgeTesting | A Test Suite Module By Forge | 0.1.4 | MIT | Forge Team |
 | ForgeUi | A UI component module by forge. | 1.0.0 | MIT | Forge Team |
 | ForgeWelcome | A playground by forge | 1.0.0 | MIT | Forge Team |
-| ForgeWire | A reactive controller rendering protocol for PHP | 2.1.1 | MIT | Forge Team |
+| ForgeWire | A reactive controller rendering protocol for PHP | 2.2.0 | MIT | Forge Team |
 
 *Module information is automatically generated from module source code.*
 
