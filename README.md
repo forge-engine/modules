@@ -29,10 +29,11 @@ This repo just happens to be the **default** registry.
 |--------|-------------|---------|---------|--------|
 | ForgeAuth | An Auth module by forge. | 0.4.0 | MIT | Forge Team |
 | ForgeComponents | Component library module that composes ForgeUi primitives | 0.1.0 | MIT | Forge Team |
-| ForgeDatabaseSQL | - | 0.4.0 | - | - |
+| ForgeDatabaseSQL | SQL database support (SQLite, MySQL, PostgreSQL) | 0.4.0 | MIT | Forge Team |
 | ForgeDebugBar | A debug bar by Forge | 1.0.0 | MIT | Forge Team |
 | ForgeDeployment | Deploy applications to cloud providers with automated provisioning | 1.0.0 | MIT | Forge Team |
 | ForgeErrorHandler | An error handler by Forge | 1.1.0 | MIT | Forge Team |
+| ForgeEvents | An Event Queue system by forge | 0.2.3 | MIT | Forge Team |
 | ForgeHub | Administration Hub for Forge Framework | 0.1.0 | MIT | Forge Team |
 | ForgeLogger | A logger by Forge. | 0.1.2 | MIT | Forge Team |
 | ForgeMarkDown | A markdown processor | 0.1.0 | MIT | Forge Team |
@@ -41,11 +42,14 @@ This repo just happens to be the **default** registry.
 | ForgeNexus | CMS for Forge Framework | 0.1.0 | MIT | Forge Team |
 | ForgeNotification | Multi-channel notification system with provider support, fluent API, and async queue integration | 0.1.0 | MIT | Forge Team |
 | ForgePackageManager | A Package Manager By Forge | 2.2.0 | MIT | Forge Team |
-| ForgeSqlOrm | - | 0.3.0 | - | - |
+| ForgeSqlOrm | SQL ORM Support (SQLite, MySQL, PostgreSQL) | 0.3.0 | MIT | Forge Team |
 | ForgeStaticGen | A Basic Static Site Generator by Forge | 0.1.1 | MIT | Forge Team |
 | ForgeStorage | Simple file upload storage module with multiple provider support | 1.0.0 | MIT | Forge Team |
 | ForgeTailwind | A tailwind module by forge | 0.1.2 | MIT | Forge Team |
+| ForgeTesting | A Test Suite Module By Forge | 0.1.4 | MIT | Forge Team |
 | ForgeUi | A UI component module by forge. | 1.0.0 | MIT | Forge Team |
+| ForgeWelcome | A playground by forge | 1.0.0 | MIT | Forge Team |
+| ForgeWire | A reactive controller rendering protocol for PHP | 2.1.1 | MIT | Forge Team |
 
 *Module information is automatically generated from module source code.*
 

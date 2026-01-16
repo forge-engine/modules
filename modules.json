@@ -420,7 +420,7 @@
         }
     },
     "forge-wire": {
-        "latest": "4.6.0",
+        "latest": "2.1.1",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of forge-wire",
