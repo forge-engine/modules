@@ -83,3 +83,4 @@ php forge.php package:list-modules
 
 Module metadata is read directly from the module source code, ensuring accuracy and eliminating redundancy.
 | ForgeMarkDown | Static site generator for Forge Framework | 0.2.0 | MIT | Forge Team |
+| ForgeDatabaseSQL | SQL database support (SQLite, MySQL, PostgreSQL) | 0.5.0 | MIT | Forge Team |
