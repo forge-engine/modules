@@ -665,7 +665,7 @@
         }
     },
     "forge-static-html": {
-        "latest": "0.1.1",
+        "latest": "0.1.0",
         "versions": {
             "0.1.1": {
                 "description": "Version 0.1.1 of forge-static-html",
