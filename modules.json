@@ -988,5 +988,15 @@
                 "integrity": "f97afd854f139622b5c5b2eaa30106b55f5047155703634aec008a367d1916ae"
             }
         }
+    },
+    "app-auth": {
+        "latest": "1.0.0",
+        "versions": {
+            "1.0.0": {
+                "description": "Version 1.0.0 of app-auth",
+                "url": "app-auth/1.0.0",
+                "integrity": "8cf5a9737af6094c82756a6048d1b4274c5c152643cc2b4077df6a955b9eeef9"
+            }
+        }
     }
 }
