@@ -37,7 +37,7 @@ This repo just happens to be the **default** registry.
 | ForgeHub | Administration Hub for Forge Framework | 0.2.0 | MIT | Forge Team |
 | ForgeLogger | A logger by Forge. | 0.2.0 | MIT | Forge Team |
 | ForgeMarkDown | A markdown processor | 0.1.0 | MIT | Forge Team |
-| ForgeMarkDown | Static site generator for Forge Framework | 0.1.0 | MIT | Forge Team |
+| ForgeMarkDown | A markdown processor | 0.1.0 | MIT | Forge Team |
 | ForgeMultiTenant | A Multi Tenant Module by Forge | 0.3.0 | MIT | Forge Team |
 | ForgeNexus | CMS for Forge Framework | 0.2.0 | MIT | Forge Team |
 | ForgeNotification | Multi-channel notification system with provider support, fluent API, and async queue integration | 0.2.0 | MIT | Forge Team |
@@ -82,6 +82,6 @@ php forge.php package:list-modules
 ```
 
 Module metadata is read directly from the module source code, ensuring accuracy and eliminating redundancy.
-| ForgeMarkDown | Static site generator for Forge Framework | 0.2.0 | MIT | Forge Team |
+| ForgeMarkDown | A markdown processor | 0.1.0 | MIT | Forge Team |
 | ForgeDatabaseSQL | SQL database support (SQLite, MySQL, PostgreSQL) | 0.5.0 | MIT | Forge Team |
 | AppAuth | Application-level auth configuration | 1.1.0 | MIT | Forge Team |

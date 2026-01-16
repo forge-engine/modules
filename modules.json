@@ -1003,5 +1003,15 @@
                 "integrity": "502339cc2a3927f7afe6ad94dabf98501807869a112824839f9937750d51c2b8"
             }
         }
+    },
+    "forge-mark-down": {
+        "latest": "0.1.0",
+        "versions": {
+            "0.1.0": {
+                "description": "Version 0.1.0 of forge-mark-down",
+                "url": "forge-mark-down/0.1.0",
+                "integrity": "95dc5297c1a8b8de2672aa6ebf0a03aee3ed61f3b5bffde155ad7830480a3845"
+            }
+        }
     }
 }
