@@ -47,7 +47,7 @@ This repo just happens to be the **default** registry.
 | ForgeStorage | Simple file upload storage module with multiple provider support | 1.0.0 | MIT | Forge Team |
 | ForgeTailwind | A tailwind module by forge | 0.1.2 | MIT | Forge Team |
 | ForgeTesting | A Test Suite Module By Forge | 0.1.4 | MIT | Forge Team |
-| ForgeUi | A UI component module by forge. | 1.0.0 | MIT | Forge Team |
+| ForgeUi | A UI component module by forge. | 1.1.0 | MIT | Forge Team |
 | ForgeWelcome | A playground by forge | 1.2.0 | MIT | Forge Team |
 | ForgeWire | A reactive controller rendering protocol for PHP | 2.3.0 | MIT | Forge Team |
 
