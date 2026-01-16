@@ -715,12 +715,17 @@
         }
     },
     "forge-static-html": {
-        "latest": "0.1.0",
+        "latest": "0.2.0",
         "versions": {
             "0.1.1": {
                 "description": "Version 0.1.1 of forge-static-html",
                 "url": "forge-static-html/0.1.1",
                 "integrity": "1e755c0cf4848b3945ca733e516f918ee5991f27f514c97160844b4a8b21eac0"
+            },
+            "0.2.0": {
+                "description": "Version 0.2.0 of forge-static-html",
+                "url": "forge-static-html/0.2.0",
+                "integrity": "32353eaca04bf3aa895d7551e90032ff71b41829f065c4c5d2b927a330ea5e53"
             }
         }
     },
