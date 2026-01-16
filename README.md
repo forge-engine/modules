@@ -38,7 +38,7 @@ This repo just happens to be the **default** registry.
 | ForgeLogger | A logger by Forge. | 0.1.2 | MIT | Forge Team |
 | ForgeMarkDown | A markdown processor | 0.1.0 | MIT | Forge Team |
 | ForgeMarkDown | Static site generator for Forge Framework | 0.1.0 | MIT | Forge Team |
-| ForgeMultiTenant | A Multi Tenant Module by Forge | 0.2.0 | MIT | Forge Team |
+| ForgeMultiTenant | A Multi Tenant Module by Forge | 0.3.0 | MIT | Forge Team |
 | ForgeNexus | CMS for Forge Framework | 0.2.0 | MIT | Forge Team |
 | ForgeNotification | Multi-channel notification system with provider support, fluent API, and async queue integration | 0.2.0 | MIT | Forge Team |
 | ForgePackageManager | A Package Manager By Forge | 3.1.0 | MIT | Forge Team |
