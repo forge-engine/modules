@@ -34,7 +34,7 @@ This repo just happens to be the **default** registry.
 | ForgeDeployment | Deploy applications to cloud providers with automated provisioning | 2.0.0 | MIT | Forge Team |
 | ForgeErrorHandler | An error handler by Forge | 1.2.0 | MIT | Forge Team |
 | ForgeEvents | An Event Queue system by forge | 1.0.0 | MIT | Forge Team |
-| ForgeHub | Administration Hub for Forge Framework | 1.0.0 | MIT | Forge Team |
+| ForgeHub | Administration Hub for Forge Framework | 2.0.0 | MIT | Forge Team |
 | ForgeLogger | A logger by Forge. | 0.3.0 | MIT | Forge Team |
 | ForgeMarkDown | A markdown processor | 0.1.0 | MIT | Forge Team |
 | ForgeMultiTenant | A Multi Tenant Module by Forge | 0.3.0 | MIT | Forge Team |
