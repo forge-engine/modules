@@ -30,7 +30,7 @@ This repo just happens to be the **default** registry.
 | ForgeAuth | An Auth module by forge. | 0.6.0 | MIT | Forge Team |
 | ForgeComponents | Component library module that composes ForgeUi primitives | 0.2.0 | MIT | Forge Team |
 | ForgeDatabaseSQL | SQL database support (SQLite, MySQL, PostgreSQL) | 0.4.0 | MIT | Forge Team |
-| ForgeDebugBar | A debug bar by Forge | 1.1.0 | MIT | Forge Team |
+| ForgeDebugBar | A debug bar by Forge | 1.2.0 | MIT | Forge Team |
 | ForgeDeployment | Deploy applications to cloud providers with automated provisioning | 2.2.0 | MIT | Forge Team |
 | ForgeErrorHandler | An error handler by Forge | 1.2.0 | MIT | Forge Team |
 | ForgeEvents | An Event Queue system by forge | 1.0.0 | MIT | Forge Team |
