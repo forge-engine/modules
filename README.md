@@ -34,7 +34,7 @@ This repo just happens to be the **default** registry.
 | ForgeDeployment | Deploy applications to cloud providers with automated provisioning | 1.2.0 | MIT | Forge Team |
 | ForgeErrorHandler | An error handler by Forge | 1.2.0 | MIT | Forge Team |
 | ForgeEvents | An Event Queue system by forge | 0.3.0 | MIT | Forge Team |
-| ForgeHub | Administration Hub for Forge Framework | 0.2.0 | MIT | Forge Team |
+| ForgeHub | Administration Hub for Forge Framework | 1.0.0 | MIT | Forge Team |
 | ForgeLogger | A logger by Forge. | 0.3.0 | MIT | Forge Team |
 | ForgeMarkDown | A markdown processor | 0.1.0 | MIT | Forge Team |
 | ForgeMultiTenant | A Multi Tenant Module by Forge | 0.3.0 | MIT | Forge Team |
@@ -81,6 +81,4 @@ php forge.php package:list-modules
 ```
 
 Module metadata is read directly from the module source code, ensuring accuracy and eliminating redundancy.
-| ForgeMarkDown | A markdown processor | 0.1.0 | MIT | Forge Team |
-| ForgeDatabaseSQL | SQL database support (SQLite, MySQL, PostgreSQL) | 0.5.0 | MIT | Forge Team |
-| AppAuth | Application-level auth configuration | 1.1.0 | MIT | Forge Team |
+MIT | Forge Team
