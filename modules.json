@@ -250,7 +250,7 @@
         }
     },
     "forge-storage": {
-        "latest": "1.1.0",
+        "latest": "1.2.0",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of forge-storage",
@@ -271,6 +271,11 @@
                 "description": "Version 1.1.0 of forge-storage",
                 "url": "forge-storage/1.1.0",
                 "integrity": "e5ee607285998807702e3e4c19d9c0fe37f5505470e177a17a1e8a83fe65ce2d"
+            },
+            "1.2.0": {
+                "description": "Version 1.2.0 of forge-storage",
+                "url": "forge-storage/1.2.0",
+                "integrity": "3ca4b046d327cd19bdaf48e1ff67c42a7b0d105561a41dee54eba9e7dbd776b4"
             }
         }
     },

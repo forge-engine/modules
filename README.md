@@ -44,7 +44,7 @@ This repo just happens to be the **default** registry.
 | ForgePackageManager | A Package Manager By Forge | 3.2.0 | MIT | Forge Team |
 | ForgeSqlOrm | SQL ORM Support (SQLite, MySQL, PostgreSQL) | 0.4.0 | MIT | Forge Team |
 | ForgeStaticGen | A Basic Static Site Generator by Forge | 0.2.0 | MIT | Forge Team |
-| ForgeStorage | Simple file upload storage module with multiple provider support | 1.1.0 | MIT | Forge Team |
+| ForgeStorage | Simple file upload storage module with multiple provider support | 1.2.0 | MIT | Forge Team |
 | ForgeTailwind | A tailwind module by forge | 0.2.0 | MIT | Forge Team |
 | ForgeTesting | A Test Suite Module By Forge | 0.3.0 | MIT | Forge Team |
 | ForgeUi | A UI component module by forge. | 1.1.0 | MIT | Forge Team |
