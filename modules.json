@@ -495,7 +495,7 @@
         }
     },
     "forge-wire": {
-        "latest": "2.3.0",
+        "latest": "2.4.0",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of forge-wire",
@@ -626,6 +626,11 @@
                 "description": "Version 2.3.0 of forge-wire",
                 "url": "forge-wire/2.3.0",
                 "integrity": "2d3147151ff04f046a2923cd92f3f63062e60c904909ada7da33d6573c555e77"
+            },
+            "2.4.0": {
+                "description": "Version 2.4.0 of forge-wire",
+                "url": "forge-wire/2.4.0",
+                "integrity": "487460b153dc93fa3e908114d9242e3d0835bc52b377fc73e24519476b81d947"
             }
         }
     },
