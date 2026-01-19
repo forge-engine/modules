@@ -83,3 +83,4 @@ php forge.php package:list-modules
 Module metadata is read directly from the module source code, ensuring accuracy and eliminating redundancy.
 MIT | Forge Team
 | ForgeDatabaseSQL | SQL database support (SQLite, MySQL, PostgreSQL) | 0.6.0 | MIT | Forge Team |
+| ForgeDatabaseSQL | SQL database support (SQLite, MySQL, PostgreSQL) | 0.7.0 | MIT | Forge Team |
