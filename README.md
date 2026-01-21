@@ -39,7 +39,7 @@ This repo just happens to be the **default** registry.
 | ForgeMarkDown | A markdown processor | 0.1.0 | MIT | Forge Team |
 | ForgeMultiTenant | A Multi Tenant Module by Forge | 0.3.0 | MIT | Forge Team |
 | ForgeNexus | CMS for Forge Framework | 0.2.0 | MIT | Forge Team |
-| ForgeNotification | Multi-channel notification system with provider support, fluent API, and async queue integration | 0.2.0 | MIT | Forge Team |
+| ForgeNotification | Multi-channel notification system with provider support, fluent API, and async queue integration | 0.3.0 | MIT | Forge Team |
 | ForgePackageManager | A Package Manager By Forge | 3.2.0 | MIT | Forge Team |
 | ForgeSqlOrm | SQL ORM Support (SQLite, MySQL, PostgreSQL) | 0.4.0 | MIT | Forge Team |
 | ForgeStaticGen | A Basic Static Site Generator by Forge | 0.2.0 | MIT | Forge Team |

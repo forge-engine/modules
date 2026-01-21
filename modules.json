@@ -360,7 +360,7 @@
         }
     },
     "forge-notification": {
-        "latest": "0.2.0",
+        "latest": "0.3.0",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of forge-notification",
@@ -371,6 +371,11 @@
                 "description": "Version 0.2.0 of forge-notification",
                 "url": "forge-notification/0.2.0",
                 "integrity": "c63d144db93ddbefb529adaa1c3bf31a23ac666d6970ce92257eb74a0c30ebc1"
+            },
+            "0.3.0": {
+                "description": "Version 0.3.0 of forge-notification",
+                "url": "forge-notification/0.3.0",
+                "integrity": "39cbea7d4989c709f616d55f16843d6242dd93a38e14dfe155f481c4b40c8643"
             }
         }
     },
