@@ -510,7 +510,7 @@
         }
     },
     "forge-events": {
-        "latest": "1.3.0",
+        "latest": "1.4.0",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of forge-events",
@@ -566,6 +566,11 @@
                 "description": "Version 1.3.0 of forge-events",
                 "url": "forge-events/1.3.0",
                 "integrity": "1069845fc48b8758efbfee8d9bfc9a274c1cc663bdb8a9666eb569c3f6aa1d75"
+            },
+            "1.4.0": {
+                "description": "Version 1.4.0 of forge-events",
+                "url": "forge-events/1.4.0",
+                "integrity": "8b3c555d2f5f53798118b7ccb15f54bc9d8df4bbf1a339c4299977a96f19f281"
             }
         }
     },
