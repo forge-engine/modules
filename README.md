@@ -35,7 +35,7 @@ This repo just happens to be the **default** registry.
 | ForgeErrorHandler | An error handler by Forge | 1.2.0 | MIT | Forge Team |
 | ForgeEvents | An Event Queue system by forge | 1.4.0 | MIT | Forge Team |
 | ForgeHub | Administration Hub for Forge Framework | 2.5.0 | MIT | Forge Team |
-| ForgeLogger | A logger by Forge. | 0.4.0 | MIT | Forge Team |
+| ForgeLogger | A logger by Forge. | 0.5.0 | MIT | Forge Team |
 | ForgeMarkDown | A markdown processor | 0.1.0 | MIT | Forge Team |
 | ForgeMultiTenant | A Multi Tenant Module by Forge | 0.3.0 | MIT | Forge Team |
 | ForgeNexus | CMS for Forge Framework | 0.2.0 | MIT | Forge Team |
