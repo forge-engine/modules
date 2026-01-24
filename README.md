@@ -85,3 +85,4 @@ MIT | Forge Team
 | ForgeDatabaseSQL | SQL database support (SQLite, MySQL, PostgreSQL) | 0.6.0 | MIT | Forge Team |
 | ForgeDatabaseSQL | SQL database support (SQLite, MySQL, PostgreSQL) | 0.7.0 | MIT | Forge Team |
 | ForgeDatabaseSQL | SQL database support (SQLite, MySQL, PostgreSQL) | 0.8.0 | MIT | Forge Team |
+| ForgeDatabaseSQL | SQL database support (SQLite, MySQL, PostgreSQL) | 0.9.0 | MIT | Forge Team |
