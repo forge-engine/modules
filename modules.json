@@ -955,7 +955,7 @@
         }
     },
     "forge-database-sql": {
-        "latest": "0.9.0",
+        "latest": "0.9.2",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of forge-database-sql",
@@ -1041,6 +1041,16 @@
                 "description": "Version 0.9.0 of forge-database-sql",
                 "url": "forge-database-sql/0.9.0",
                 "integrity": "72bfa6c42a7a62d2aece1f2607a45d834fc64baf2267a5c74ff0985d115355a9"
+            },
+            "0.9.1": {
+                "description": "Version 0.9.1 of forge-database-sql",
+                "url": "forge-database-sql/0.9.1",
+                "integrity": "acffe3104335bef90180307e5e4e0e0629a08646459f13d64fe97579297870c6"
+            },
+            "0.9.2": {
+                "description": "Version 0.9.2 of forge-database-sql",
+                "url": "forge-database-sql/0.9.2",
+                "integrity": "578f694aa2db5f52ec22477ac6d3c803c900fe65110adb772a9f087b18f58f7d"
             }
         }
     },
@@ -1246,6 +1256,16 @@
                 "description": "Version 0.1.0 of forge-mark-down",
                 "url": "forge-mark-down/0.1.0",
                 "integrity": "95dc5297c1a8b8de2672aa6ebf0a03aee3ed61f3b5bffde155ad7830480a3845"
+            }
+        }
+    },
+    "forge-database-s-q-l": {
+        "latest": "0.9.0",
+        "versions": {
+            "0.9.0": {
+                "description": "Version 0.9.0 of forge-database-s-q-l",
+                "url": "forge-database-s-q-l/0.9.0",
+                "integrity": "2d16ab3ce2dab3e39e34cd18ec07d49ee8d266cd502b742ed1d995e0907b4b76"
             }
         }
     }
