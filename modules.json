@@ -1440,7 +1440,7 @@
         }
     },
     "forge-billing": {
-        "latest": "0.2.2",
+        "latest": "0.2.3",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of forge-billing",
@@ -1461,6 +1461,11 @@
                 "description": "Version 0.2.2 of forge-billing",
                 "url": "forge-billing/0.2.2",
                 "integrity": "76a373f235928d6ef257057d8c54f3deea6ec8774244201c4c498f7bb4f8c069"
+            },
+            "0.2.3": {
+                "description": "Version 0.2.3 of forge-billing",
+                "url": "forge-billing/0.2.3",
+                "integrity": "6f66f9141e85e073bc071bb5b1d995b90db52f37b60cb14c95a850c24cae24de"
             }
         }
     }
