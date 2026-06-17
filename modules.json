@@ -1538,5 +1538,15 @@
                 "integrity": "6f66f9141e85e073bc071bb5b1d995b90db52f37b60cb14c95a850c24cae24de"
             }
         }
+    },
+    "forge-router": {
+        "latest": "1.0.0",
+        "versions": {
+            "1.0.0": {
+                "description": "Version 1.0.0 of forge-router",
+                "url": "forge-router/1.0.0",
+                "integrity": "ddfd99045eba9577077a93e263e4072399746251d4aac95ea3506469537d3aaa"
+            }
+        }
     }
 }
