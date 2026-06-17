@@ -1,0 +1,19 @@
+# Ignore sensitive environment files
+.env
+!.env.example
+
+# Ignore modules
+!cache/.gitkeep
+
+# Ignore cache and logs
+*.log
+*.cache
+
+# Ignore IDE and editor settings
+.idea/
+*.sublime-workspace
+*.sublime-project
+.vscode/
+*.code-workspace
+.DS_Store
+/kernel/*
