@@ -1430,12 +1430,17 @@
         }
     },
     "forge-mark-down": {
-        "latest": "0.1.0",
+        "latest": "0.1.1",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of forge-mark-down",
                 "url": "forge-mark-down/0.1.0",
                 "integrity": "95dc5297c1a8b8de2672aa6ebf0a03aee3ed61f3b5bffde155ad7830480a3845"
+            },
+            "0.1.1": {
+                "description": "Version 0.1.1 of forge-mark-down",
+                "url": "forge-mark-down/0.1.1",
+                "integrity": "be86882956a2b220a264892f5dac97c66cf5703ee8752f59215179890fbba6a3"
             }
         }
     },
