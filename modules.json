@@ -1693,5 +1693,15 @@
                 "integrity": "f45e3c169f93031b16eb198c88fb59288bd5c28740af62720b80a37bb3b0049d"
             }
         }
+    },
+    "forge-landing": {
+        "latest": "0.1.0",
+        "versions": {
+            "0.1.0": {
+                "description": "Version 0.1.0 of forge-landing",
+                "url": "forge-landing/0.1.0",
+                "integrity": "3e5eef593c274d86ccc24f704316145f73b6b818fc1fafa038fd6877a9dd36df"
+            }
+        }
     }
 }
