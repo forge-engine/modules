@@ -1678,5 +1678,15 @@
                 "integrity": "3078520c12693f61e89f87986c32041fcc0b82701a445baed1a05de272fed5bf"
             }
         }
+    },
+    "forge-app-auth": {
+        "latest": "0.1.0",
+        "versions": {
+            "0.1.0": {
+                "description": "Version 0.1.0 of forge-app-auth",
+                "url": "forge-app-auth/0.1.0",
+                "integrity": "f45e3c169f93031b16eb198c88fb59288bd5c28740af62720b80a37bb3b0049d"
+            }
+        }
     }
 }
