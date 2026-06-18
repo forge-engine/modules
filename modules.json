@@ -1668,5 +1668,15 @@
                 "integrity": "b49f83c882675fa8dc7cb5cbd4eed0b326c72ed7b3715618b2ec6481b04e1ec8"
             }
         }
+    },
+    "forge-admin-console": {
+        "latest": "0.1.0",
+        "versions": {
+            "0.1.0": {
+                "description": "Version 0.1.0 of forge-admin-console",
+                "url": "forge-admin-console/0.1.0",
+                "integrity": "3078520c12693f61e89f87986c32041fcc0b82701a445baed1a05de272fed5bf"
+            }
+        }
     }
 }
