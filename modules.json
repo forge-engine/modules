@@ -1580,7 +1580,7 @@
         }
     },
     "forge-components": {
-        "latest": "0.3.4",
+        "latest": "0.3.5",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of forge-components",
@@ -1621,6 +1621,11 @@
                 "description": "Version 0.3.4 of forge-components",
                 "url": "forge-components/0.3.4",
                 "integrity": "eeec5621c58ff9de59203bc3f30c70c42fd2d30ccfc2e4315269b21948419615"
+            },
+            "0.3.5": {
+                "description": "Version 0.3.5 of forge-components",
+                "url": "forge-components/0.3.5",
+                "integrity": "00fcde6f0e087749a9f6947a87fdc8cb997d65f102e393537fd05adc3a9fbb80"
             }
         }
     },
