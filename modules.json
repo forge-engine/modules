@@ -1195,7 +1195,7 @@
         }
     },
     "forge-multi-tenant": {
-        "latest": "0.3.3",
+        "latest": "0.3.4",
         "versions": {
             "0.1.1": {
                 "description": "Version 0.1.1 of forge-multi-tenant",
@@ -1261,6 +1261,11 @@
                 "description": "Version 0.3.3 of forge-multi-tenant",
                 "url": "forge-multi-tenant/0.3.3",
                 "integrity": "7134e4e557a7d583fe6760dbecb9bfc7682df854d035926ef0522f98444f16a5"
+            },
+            "0.3.4": {
+                "description": "Version 0.3.4 of forge-multi-tenant",
+                "url": "forge-multi-tenant/0.3.4",
+                "integrity": "bcccfc9a42f23cd49e11214fd93abeaba65c76280409290bc9d271d0c8728e1a"
             }
         }
     },
