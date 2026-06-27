@@ -1780,12 +1780,17 @@
         }
     },
     "forge-admin-console": {
-        "latest": "0.1.0",
+        "latest": "0.1.1",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of forge-admin-console",
                 "url": "forge-admin-console/0.1.0",
                 "integrity": "3078520c12693f61e89f87986c32041fcc0b82701a445baed1a05de272fed5bf"
+            },
+            "0.1.1": {
+                "description": "Version 0.1.1 of forge-admin-console",
+                "url": "forge-admin-console/0.1.1",
+                "integrity": "59a186f2b94a53a33dfed0d250d6798541344cec51a1b0cb348d75689edb56c1"
             }
         }
     },
