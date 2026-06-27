@@ -630,7 +630,7 @@
         }
     },
     "forge-welcome": {
-        "latest": "1.2.3",
+        "latest": "1.2.4",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of forge-welcome",
@@ -696,6 +696,11 @@
                 "description": "Version 1.2.3 of forge-welcome",
                 "url": "forge-welcome/1.2.3",
                 "integrity": "6b3cad167e82ac97fcee23ebc934e22bb4adaec7d74e1703b33e53a61fd24e0b"
+            },
+            "1.2.4": {
+                "description": "Version 1.2.4 of forge-welcome",
+                "url": "forge-welcome/1.2.4",
+                "integrity": "8ee7b76f8d59737884dd06e6e5b389deef12f33a9cf7e0eb67a4bd4c6850b42f"
             }
         }
     },
