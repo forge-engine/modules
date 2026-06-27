@@ -1760,7 +1760,7 @@
         }
     },
     "forge-view": {
-        "latest": "0.1.1",
+        "latest": "0.1.2",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of forge-view",
@@ -1771,6 +1771,11 @@
                 "description": "Version 0.1.1 of forge-view",
                 "url": "forge-view/0.1.1",
                 "integrity": "b49f83c882675fa8dc7cb5cbd4eed0b326c72ed7b3715618b2ec6481b04e1ec8"
+            },
+            "0.1.2": {
+                "description": "Version 0.1.2 of forge-view",
+                "url": "forge-view/0.1.2",
+                "integrity": "f0166c44ec783c2dc17e8e881941c738fd4c35bb280e0b4923c1f11346ebc87a"
             }
         }
     },
