@@ -480,7 +480,7 @@
         }
     },
     "forge-nexus": {
-        "latest": "0.2.1",
+        "latest": "0.2.2",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of forge-nexus",
@@ -496,6 +496,11 @@
                 "description": "Version 0.2.1 of forge-nexus",
                 "url": "forge-nexus/0.2.1",
                 "integrity": "0fbcb5404ed2f35e5e6677d0b98a5ed8e92fa6e70a0b04448bb366ab0fcecc50"
+            },
+            "0.2.2": {
+                "description": "Version 0.2.2 of forge-nexus",
+                "url": "forge-nexus/0.2.2",
+                "integrity": "4342e1debfd79ade8b01a6858bc0d332a0ffa8ee6c8f3ba4335b4f933167325e"
             }
         }
     },
