@@ -1795,12 +1795,17 @@
         }
     },
     "forge-app-auth": {
-        "latest": "0.1.0",
+        "latest": "0.1.1",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of forge-app-auth",
                 "url": "forge-app-auth/0.1.0",
                 "integrity": "f45e3c169f93031b16eb198c88fb59288bd5c28740af62720b80a37bb3b0049d"
+            },
+            "0.1.1": {
+                "description": "Version 0.1.1 of forge-app-auth",
+                "url": "forge-app-auth/0.1.1",
+                "integrity": "d7f4f7adf8d30cfcb48fa7f3bf18c7552d578b69545059a3d075ea2ef3b5a52a"
             }
         }
     },
