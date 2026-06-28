@@ -1,8 +1,11 @@
-# Forge Kernel - Modules Registry
+# Forge Kernel Modules Registry
 
-This registry contains the capability modules I've built for my own projects and decided to share. Module information (name, description, version, author, license) is extracted directly from each module's PHP source code using the `#[Module]` attribute.
+Capability modules for the Forge kernel. Module metadata is extracted from
+each module's PHP source code using the `#[Module]` attribute.
 
-These aren't products. They're my personal packages that happen to be useful enough to publish. I'll update them when I publish new versions, and you can take those updates if you want. But more importantly, they're here as a starting point — use what you need, modify what doesn't fit, delete what you don't want. If you find a bug, you can fix it in your project right away, report it and wait for an update, or create a PR. You own your stack. That's the point of Forge.
+These are personal packages that happen to be useful enough to publish.
+Update them when new versions are released, take what you need, modify
+what does not fit, delete what you do not want. You own your stack.
 
 ## Index
 
@@ -19,36 +22,38 @@ When you run a command like:
 php forge.php package:install-module --module=forge-auth@0.1.0
 ```
 
-The package manager knows to come here and look in the `modules/` folder. All official `forge-*` modules live here. If you're building your own registry (which is encouraged), you can point the package manager to your own repo and structure it the same way.
+The package manager looks in the `modules/` folder. All official `forge-*`
+modules live here. If you are building your own registry, point the package
+manager to your own repo with the same structure.
 
-This repo just happens to be the **default** registry.
+This is the default registry.
 
 ## Available Modules
 
-| Module              | Description                                                                                      | Version | License | Author     |
-| ------------------- | ------------------------------------------------------------------------------------------------ | ------- | ------- | ---------- |
-| ForgeAuth           | An Auth module by forge.                                                                         | 0.7.0   | MIT     | Forge Team |
-| ForgeComponents     | Component library module that composes ForgeUi primitives                                        | 0.2.0   | MIT     | Forge Team |
-| ForgeDatabaseSQL    | SQL database support (SQLite, MySQL, PostgreSQL)                                                 | 0.4.0   | MIT     | Forge Team |
-| ForgeDebugBar       | A debug bar by Forge                                                                             | 1.3.0   | MIT     | Forge Team |
-| ForgeDeployment     | Deploy applications to cloud providers with automated provisioning                               | 2.5.0   | MIT     | Forge Team |
-| ForgeErrorHandler   | An error handler by Forge                                                                        | 1.2.0   | MIT     | Forge Team |
-| ForgeEvents         | An Event Queue system by forge                                                                   | 1.4.0   | MIT     | Forge Team |
-| ForgeHub            | Administration Hub for Forge Framework                                                           | 2.5.0   | MIT     | Forge Team |
-| ForgeLogger         | A logger by Forge.                                                                               | 0.5.0   | MIT     | Forge Team |
-| ForgeMarkDown       | A markdown processor                                                                             | 0.1.0   | MIT     | Forge Team |
-| ForgeMultiTenant    | A Multi Tenant Module by Forge                                                                   | 0.3.0   | MIT     | Forge Team |
-| ForgeNexus          | CMS for Forge Framework                                                                          | 0.2.0   | MIT     | Forge Team |
-| ForgeNotification   | Multi-channel notification system with provider support, fluent API, and async queue integration | 0.3.0   | MIT     | Forge Team |
-| ForgePackageManager | A Package Manager By Forge                                                                       | 3.3.0   | MIT     | Forge Team |
-| ForgeSqlOrm         | SQL ORM Support (SQLite, MySQL, PostgreSQL)                                                      | 0.6.0   | MIT     | Forge Team |
-| ForgeStaticGen      | A Basic Static Site Generator by Forge                                                           | 0.2.0   | MIT     | Forge Team |
-| ForgeStorage        | Simple file upload storage module with multiple provider support                                 | 1.3.0   | MIT     | Forge Team |
-| ForgeTailwind       | A tailwind module by forge                                                                       | 0.2.0   | MIT     | Forge Team |
-| ForgeTesting        | A Test Suite Module By Forge                                                                     | 0.4.0   | MIT     | Forge Team |
-| ForgeUi             | A UI component module by forge.                                                                  | 1.1.0   | MIT     | Forge Team |
-| ForgeWelcome        | A playground by forge                                                                            | 1.2.0   | MIT     | Forge Team |
-| ForgeWire           | A reactive controller rendering protocol for PHP                                                 | 2.7.0   | MIT     | Forge Team |
+| Module              | Description                                                                                      | Version |
+| ------------------- | ------------------------------------------------------------------------------------------------ | ------- |
+| ForgeAuth           | An Auth module by forge.                                                                         | 0.7.0   |
+| ForgeComponents     | Component library module that composes ForgeUi primitives                                        | 0.2.0   |
+| ForgeDatabaseSQL    | SQL database support (SQLite, MySQL, PostgreSQL)                                                 | 0.4.0   |
+| ForgeDebugBar       | A debug bar by Forge                                                                             | 1.3.0   |
+| ForgeDeployment     | Deploy applications to cloud providers with automated provisioning                               | 2.5.0   |
+| ForgeErrorHandler   | An error handler by Forge                                                                        | 1.2.0   |
+| ForgeEvents         | An Event Queue system by forge                                                                   | 1.4.0   |
+| ForgeHub            | Administration Hub for Forge Framework                                                           | 2.5.0   |
+| ForgeLogger         | A logger by Forge.                                                                               | 0.5.0   |
+| ForgeMarkDown       | A markdown processor                                                                             | 0.1.0   |
+| ForgeMultiTenant    | A Multi Tenant Module by Forge                                                                   | 0.3.0   |
+| ForgeNexus          | CMS for Forge Framework                                                                          | 0.2.0   |
+| ForgeNotification   | Multi-channel notification system with provider support, fluent API, and async queue integration | 0.3.0   |
+| ForgePackageManager | A Package Manager By Forge                                                                       | 3.3.0   |
+| ForgeSqlOrm         | SQL ORM Support (SQLite, MySQL, PostgreSQL)                                                      | 0.6.0   |
+| ForgeStaticGen      | A Basic Static Site Generator by Forge                                                           | 0.2.0   |
+| ForgeStorage        | Simple file upload storage module with multiple provider support                                 | 1.3.0   |
+| ForgeTailwind       | A tailwind module by forge                                                                       | 0.2.0   |
+| ForgeTesting        | A Test Suite Module By Forge                                                                     | 0.4.0   |
+| ForgeUi             | A UI component module by forge.                                                                  | 1.1.0   |
+| ForgeWelcome        | A playground by forge                                                                            | 1.2.0   |
+| ForgeWire           | A reactive controller rendering protocol for PHP                                                 | 2.7.0   |
 
 _Module information is automatically generated from module source code._
 
@@ -80,9 +85,4 @@ To see available modules and their information, use the package manager:
 php forge.php package:list-modules
 ```
 
-Module metadata is read directly from the module source code, ensuring accuracy and eliminating redundancy.
-MIT | Forge Team
-| ForgeDatabaseSQL | SQL database support (SQLite, MySQL, PostgreSQL) | 0.6.0 | MIT | Forge Team |
-| ForgeDatabaseSQL | SQL database support (SQLite, MySQL, PostgreSQL) | 0.7.0 | MIT | Forge Team |
-| ForgeDatabaseSQL | SQL database support (SQLite, MySQL, PostgreSQL) | 0.8.0 | MIT | Forge Team |
-| ForgeDatabaseSQL | SQL database support (SQLite, MySQL, PostgreSQL) | 0.9.0 | MIT | Forge Team |
+Module metadata is read directly from the module source code.
