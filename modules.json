@@ -2008,5 +2008,15 @@
                 "integrity": "a9d4ab6bb1215268631d08fee9385ed2f484c96473e07fb95d0a208244c887dd"
             }
         }
+    },
+    "forge-appauth": {
+        "latest": "0.1.2",
+        "versions": {
+            "0.1.2": {
+                "description": "Version 0.1.2 of forge-appauth",
+                "url": "forge-appauth/0.1.2",
+                "integrity": "b61a40cfb8797dc5a8b64e387d13042a05f59d315063c689fb90eaffc8b60161"
+            }
+        }
     }
 }
