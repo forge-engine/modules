@@ -1410,7 +1410,7 @@
         }
     },
     "forge-static-html": {
-        "latest": "0.2.0",
+        "latest": "0.2.1",
         "versions": {
             "0.1.1": {
                 "description": "Version 0.1.1 of forge-static-html",
@@ -1421,6 +1421,11 @@
                 "description": "Version 0.2.0 of forge-static-html",
                 "url": "forge-static-html/0.2.0",
                 "integrity": "32353eaca04bf3aa895d7551e90032ff71b41829f065c4c5d2b927a330ea5e53"
+            },
+            "0.2.1": {
+                "description": "Version 0.2.1 of forge-static-html",
+                "url": "forge-static-html/0.2.1",
+                "integrity": "90bd3c9c4304a4e5183ba2fd8fde685b9ec44d1e78beeccaaba8fb278511bec6"
             }
         }
     },
