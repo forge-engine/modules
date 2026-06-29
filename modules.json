@@ -1955,7 +1955,7 @@
         }
     },
     "forge-app-auth": {
-        "latest": "0.1.1",
+        "latest": "0.1.2",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of forge-app-auth",
@@ -1966,6 +1966,11 @@
                 "description": "Version 0.1.1 of forge-app-auth",
                 "url": "forge-app-auth/0.1.1",
                 "integrity": "d7f4f7adf8d30cfcb48fa7f3bf18c7552d578b69545059a3d075ea2ef3b5a52a"
+            },
+            "0.1.2": {
+                "description": "Version 0.1.2 of forge-app-auth",
+                "url": "forge-app-auth/0.1.2",
+                "integrity": "b9bafa37e86eb1de8737b853ac89b09f103920e2cfdf179085151148fff952ba"
             }
         }
     },
