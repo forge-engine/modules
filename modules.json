@@ -2075,7 +2075,7 @@
         }
     },
     "forge-landing": {
-        "latest": "0.1.1",
+        "latest": "0.1.2",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of forge-landing",
@@ -2086,6 +2086,11 @@
                 "description": "Version 0.1.1 of forge-landing",
                 "url": "forge-landing/0.1.1",
                 "integrity": "8a5c58784592ced6d45e72c3d1565f4113a51a7e95eb1a7cfc71d38b56799ef2"
+            },
+            "0.1.2": {
+                "description": "Version 0.1.2 of forge-landing",
+                "url": "forge-landing/0.1.2",
+                "integrity": "e9eb8388186fd843468ff55684f7bf670089ba96dab278c6c0f661ea5bc824f4"
             }
         }
     },
