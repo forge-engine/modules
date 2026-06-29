@@ -1890,7 +1890,7 @@
         }
     },
     "forge-router": {
-        "latest": "1.0.10",
+        "latest": "1.0.11",
         "versions": {
             "1.0.0": {
                 "description": "Version 1.0.0 of forge-router",
@@ -1946,6 +1946,11 @@
                 "description": "Version 1.0.10 of forge-router",
                 "url": "forge-router/1.0.10",
                 "integrity": "e31b20cd479b090b5e4688a6a3899713b31da370e5097814ba61d6f47936f45e"
+            },
+            "1.0.11": {
+                "description": "Version 1.0.11 of forge-router",
+                "url": "forge-router/1.0.11",
+                "integrity": "468dfc407ab391fb2c4e8f62e02ba91956f6bac154c7abdef62ec5b232473abd"
             }
         }
     },
