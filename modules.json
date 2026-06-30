@@ -200,7 +200,7 @@
         }
     },
     "forge-logger": {
-        "latest": "0.5.4",
+        "latest": "0.5.5",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of forge-logger",
@@ -256,6 +256,11 @@
                 "description": "Version 0.5.4 of forge-logger",
                 "url": "forge-logger/0.5.4",
                 "integrity": "9a21469e6a0614c228729509f4bf9d22808d9f80137d1ed88ec8b39f122a4af6"
+            },
+            "0.5.5": {
+                "description": "Version 0.5.5 of forge-logger",
+                "url": "forge-logger/0.5.5",
+                "integrity": "eceb984b87a134d3377fa1e3363e71ab1ad8f8b02701ce6493aaf7f701f784d7"
             }
         }
     },
