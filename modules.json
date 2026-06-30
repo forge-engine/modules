@@ -1940,7 +1940,7 @@
         }
     },
     "forge-mark-down": {
-        "latest": "0.1.3",
+        "latest": "0.1.4",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of forge-mark-down",
@@ -1961,6 +1961,11 @@
                 "description": "Version 0.1.3 of forge-mark-down",
                 "url": "forge-mark-down/0.1.3",
                 "integrity": "d4ed0fc8ead27cd5e061bc7be92e32fa51a5fb30219f0d1f623a8b62a82323d3"
+            },
+            "0.1.4": {
+                "description": "Version 0.1.4 of forge-mark-down",
+                "url": "forge-mark-down/0.1.4",
+                "integrity": "5812507c4d24df992e1ad70b8c027e15b78873093bbcb87a818be8e7b2cc68e3"
             }
         }
     },
