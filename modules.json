@@ -1365,7 +1365,7 @@
         }
     },
     "forge-static-gen": {
-        "latest": "0.2.2",
+        "latest": "0.2.3",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of forge-static-gen",
@@ -1391,6 +1391,11 @@
                 "description": "Version 0.2.2 of forge-static-gen",
                 "url": "forge-static-gen/0.2.2",
                 "integrity": "b3e5ba3c28e947833ba7b540aa842b69fcb2bb6bb627c170602f87653abd6a3d"
+            },
+            "0.2.3": {
+                "description": "Version 0.2.3 of forge-static-gen",
+                "url": "forge-static-gen/0.2.3",
+                "integrity": "8ddf40f2566a3ed8625ec64a498a08e91020f441979396fc85c39b9fc80cf851"
             }
         }
     },
