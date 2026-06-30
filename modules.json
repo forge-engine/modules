@@ -845,7 +845,7 @@
         }
     },
     "forge-ui": {
-        "latest": "1.1.4",
+        "latest": "1.1.5",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of forge-ui",
@@ -911,6 +911,11 @@
                 "description": "Version 1.1.4 of forge-ui",
                 "url": "forge-ui/1.1.4",
                 "integrity": "4e84f97f581be9f4da66d7bb012abaef70ed499aa74c9a25c6725a5bedf173a9"
+            },
+            "1.1.5": {
+                "description": "Version 1.1.5 of forge-ui",
+                "url": "forge-ui/1.1.5",
+                "integrity": "a08b05bfce363c6892ac08da70daa4aff5d7c1848278af73d17e86167dd1ae06"
             }
         }
     },
