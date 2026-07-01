@@ -2485,7 +2485,7 @@
         }
     },
     "app-auth": {
-        "latest": "0.1.3",
+        "latest": "0.1.4",
         "versions": {
             "0.1.0": {
                 "description": "Version 0.1.0 of app-auth",
@@ -2506,6 +2506,11 @@
                 "description": "Version 0.1.3 of app-auth",
                 "url": "app-auth/0.1.3",
                 "integrity": "353078c1a0f6e8163beb04b71ecdb1c03941e8d47565ec47ebfc4d539ba43774"
+            },
+            "0.1.4": {
+                "description": "Version 0.1.4 of app-auth",
+                "url": "app-auth/0.1.4",
+                "integrity": "5583e29cddf22a7182a84af192f72d80b4d0e3ca4f4a4e27ac97b88d59ba2757"
             }
         }
     },
